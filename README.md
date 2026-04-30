@@ -1,88 +1,123 @@
 # FactGraph-Verifier
-Knowledge Graph Grounded LLM Hallucination Mitigation System
 
-Reducing Hallucinated Labels in LLM Annotation through Knowledge Graph Verification
+### **Reducing Hallucinated Labels in LLM Predictions through Knowledge Graph Verification**
 
-Overview
-FactGraph Annotator is a hybrid symbolic-neural fact verification framework designed to improve the factual reliability of Large Language Model (LLM) generated annotations.
+---
+
+## **Overview**
+**FactGraph Verifier** is a hybrid symbolic-neural fact verification framework designed to improve the factual reliability of Large Language Model (LLM) generated predictions.
+
 Rather than replacing LLM reasoning, FactGraph acts as an external verification layer by grounding predictions through:
-Knowledge Graph retrieval (Neo4j + Wikidata)
-Semantic fallback retrieval (Sentence Transformers)
-Natural Language Inference (DeBERTa)
-Hallucination rescue evaluation
-Core Goal
-Reduce hallucinated or unsupported LLM predictions by validating claims against structured external evidence.
 
-Key Features 🎯
-LLM Baseline Annotation
-LLaMA-based annotation pipeline
-Generates SUPPORTS / REFUTES / NOT ENOUGH INFO labels
-Provides hallucination-prone baseline for evaluation
-Knowledge Graph Verification
-Neo4j-powered graph database
-Wikidata-derived factual knowledge base
-Exact symbolic fact verification
-Semantic Fallback Retrieval
-Sentence Transformer embedding retrieval
-Subject-neighborhood semantic search
-Improves recall when exact KG matching fails
-NLI Verification
-DeBERTa-based claim-evidence validation
-Produces final grounded predictions
-Hallucination Rescue Metrics
-Measures how often FactGraph corrects incorrect LLM predictions
-Focuses on trustworthiness over raw benchmark accuracy
+- **Knowledge Graph retrieval (Neo4j + Wikidata)**
+- **Semantic fallback retrieval (Sentence Transformers)**
+- **Natural Language Inference (DeBERTa)**
+- **Hallucination rescue evaluation**
 
-System Architecture 🏗️
+### **Core Goal**
+**Reduce hallucinated or unsupported LLM predictions by validating claims against structured external evidence.**
+
+---
+
+## **Key Features 🎯**
+
+### **LLM Baseline Annotation**
+- LLaMA-based prediction pipeline
+- Generates **SUPPORTS / REFUTES / NOT ENOUGH INFO** labels
+- Provides hallucination-prone baseline for evaluation
+
+### **Knowledge Graph Verification**
+- Neo4j-powered graph database
+- Wikidata-derived factual knowledge base
+- Exact symbolic fact verification
+
+### **Semantic Fallback Retrieval**
+- Sentence Transformer embedding retrieval
+- Subject-neighborhood semantic search
+- Improves recall when exact KG matching fails
+
+### **NLI Verification**
+- DeBERTa-based claim-evidence validation
+- Produces final grounded predictions
+
+### **Hallucination Rescue Metrics**
+- Measures how often FactGraph corrects incorrect LLM predictions
+- Prioritizes factual trustworthiness over raw benchmark accuracy
+
+---
+
+## **System Architecture **
+
+
 <img width="1920" height="1080" alt="Untitled (Presentation)" src="https://github.com/user-attachments/assets/704bfbc8-18c4-4499-9605-8882aed07748" />
 
 
 
-Dataset 
-FEVER (Fact Extraction and VERification)
-Wikipedia-derived factual claims
-Human-verified labels:
-SUPPORTS
-REFUTES
-NOT ENOUGH INFO
-Evidence-backed benchmark for fact verification
-Why FEVER?
+## **Dataset 📚**
+
+### **FEVER (Fact Extraction and VERification)**
+- Wikipedia-derived factual claims
+- Human-verified labels:
+  - **SUPPORTS**
+  - **REFUTES**
+  - **NOT ENOUGH INFO**
+- Evidence-backed benchmark for fact verification
+
+### **Why FEVER?**
 Provides a rigorous benchmark for comparing:
-Raw LLM annotation performance
-Knowledge Graph grounded verification
+- Raw LLM annotation performance
+- Knowledge Graph grounded verification
 
-Results 📈
-Baseline LLM Accuracy
-57.14%
-KG System Accuracy
-45.67%
-Hallucination Rescue Rate
-59.62%
+---
 
-Key Insight 💡
+## **Results 📈**
+
+### **Baseline LLM Accuracy**
+**57.14%**
+
+### **KG System Accuracy**
+**45.67%**
+
+### **Hallucination Rescue Rate**
+**59.62%**
+
+---
+
+## **Key Insight 💡**
 Although standalone LLMs achieved higher raw classification accuracy, FactGraph corrected:
-127 out of 213 incorrect LLM predictions (~60%)
-Primary strengths:
-Suppresses hallucinations
-Detects unsupported claims
-Reduces false certainty
-Improves factual trustworthiness
 
-Why This Matters
-LLM Baseline:
-Higher recall
-Higher hallucination
-Overconfident predictions
-FactGraph:
-Lower raw accuracy
-Higher factual caution
-Better uncertainty calibration
-External evidence grounding
-Bottom line:
-FactGraph improves reliability, safety, and factual robustness rather than simply maximizing prediction score.
+### **127 out of 213 incorrect LLM predictions (~60%)**
 
-Installation Guide ⚙️
-Quick Setup
+### **Primary strengths:**
+- Suppresses hallucinations
+- Detects unsupported claims
+- Reduces false certainty
+- Improves factual trustworthiness
+
+---
+
+## **Why This Matters**
+
+### **LLM Baseline:**
+- Higher recall
+- Higher hallucination
+- Overconfident predictions
+
+### **FactGraph:**
+- Lower raw accuracy
+- Higher factual caution
+- Better uncertainty calibration
+- External evidence grounding
+
+### **Bottom line:**
+**FactGraph improves reliability, safety, and factual robustness rather than simply maximizing prediction score.**
+
+---
+
+## **Installation Guide ⚙️**
+
+### **Quick Setup**
+```bash
 git clone https://github.com/yourusername/factgraph-annotator.git
 cd factgraph-annotator
 
