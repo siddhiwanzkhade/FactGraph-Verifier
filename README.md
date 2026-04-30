@@ -4,7 +4,13 @@
 
 ---
 
-<img width="1454" height="1082" alt="38fbea16-99e4-4a30-a637-65e549e07135" src="https://github.com/user-attachments/assets/5779d15b-7325-4e6c-8f93-9ec3627362cd" />
+<p align="center">
+  <img 
+    src="https://github.com/user-attachments/assets/5779d15b-7325-4e6c-8f93-9ec3627362cd" 
+    alt="FactGraph KG Verification Example"
+    width="750"
+  />
+</p>
 
 ---
 ## Problem
