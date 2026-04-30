@@ -18,8 +18,9 @@ Rather than replacing LLM reasoning, FactGraph acts as an external verification 
 **Reduce hallucinated or unsupported LLM predictions by validating claims against structured external evidence.**
 
 ---
+<img width="1454" height="1082" alt="38fbea16-99e4-4a30-a637-65e549e07135" src="https://github.com/user-attachments/assets/5779d15b-7325-4e6c-8f93-9ec3627362cd" />
 
-## **Key Features 🎯**
+## **Key Features **
 
 ### **LLM Baseline Annotation**
 - LLaMA-based prediction pipeline
@@ -53,7 +54,7 @@ Rather than replacing LLM reasoning, FactGraph acts as an external verification 
 
 
 
-## **Dataset 📚**
+## **Dataset Overview**
 
 ### **FEVER (Fact Extraction and VERification)**
 - Wikipedia-derived factual claims
@@ -63,14 +64,10 @@ Rather than replacing LLM reasoning, FactGraph acts as an external verification 
   - **NOT ENOUGH INFO**
 - Evidence-backed benchmark for fact verification
 
-### **Why FEVER?**
-Provides a rigorous benchmark for comparing:
-- Raw LLM annotation performance
-- Knowledge Graph grounded verification
 
 ---
 
-## **Results 📈**
+## **Results **
 
 ### **Baseline LLM Accuracy**
 **57.14%**
@@ -83,7 +80,7 @@ Provides a rigorous benchmark for comparing:
 
 ---
 
-## **Key Insight 💡**
+## **Key Insight **
 Although standalone LLMs achieved higher raw classification accuracy, FactGraph corrected:
 
 ### **127 out of 213 incorrect LLM predictions (~60%)**
@@ -114,7 +111,7 @@ Although standalone LLMs achieved higher raw classification accuracy, FactGraph 
 
 ---
 
-## **Installation Guide ⚙️**
+## **Installation Guide **
 
 ### **Quick Setup**
 ```bash
@@ -126,24 +123,16 @@ conda activate factgraph
 
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
+```
 
-Neo4j Setup
+## **Neo4j Setup **
 Install Neo4j Desktop
 Start local instance
 Update credentials in project scripts
 
-Run Full Pipeline ▶️
-python fever_wikidata_kg.py
-python load_kgfacts_to_neo4j.py
-python extract_triple_v8.py
-python query_kg.py
-python sem_fallback.py
-python nli.py
-python llm_label_llama.py
-python rescue_rate_500_claims.py
 
 
-Repository Structure 📂
+## **Repository Structure **
 fever_wikidata_kg.py        # KG construction from Wikidata
 load_kgfacts_to_neo4j.py   # Load KG into Neo4j
 extract_triple_v8.py        # Claim triple extraction
@@ -154,7 +143,7 @@ llm_label_llama.py          # Baseline LLM labeling
 rescue_rate_500_claims.py  # Final rescue metrics
 
 
-Tech Stack 🛠️
+## **Tech Stack **
 Python
 spaCy
 Neo4j
@@ -162,11 +151,11 @@ Wikidata API
 Sentence Transformers
 Hugging Face Transformers
 DeBERTa NLI
-LLaMA / Llama-based LLMs
+LLaMA / Llama-based LLMs labels
 Pandas
 Scikit-learn
 
-Technical Challenges Solved 🔍
+## **Technical Challenges Solved **
 Entity ambiguity
 Property mismatch
 Occupation normalization
@@ -176,14 +165,14 @@ Semantic retrieval precision
 Evidence verbalization
 Hallucination suppression
 
-Limitations ⚠️
+## **Limitations **
 Lower support/refute recall than unconstrained LLMs
 KG coverage constraints
 Surface-form mismatches
 Limited multi-hop reasoning
 Conservative NOT ENOUGH INFO bias
 
-Future Work 🚀
+## **Future Work **
 Expanded KG property coverage
 Better entity disambiguation
 Graph-RAG integration
@@ -192,33 +181,11 @@ Multi-hop graph reasoning
 Fine-tuned NLI verification
 Confidence calibration
 
-Use Cases 🌍
-LLM safety systems
-Annotation quality assurance
-Enterprise fact-checking
-Graph-RAG validation
-Hallucination mitigation middleware
-AI trustworthiness research
 
-Resume-Ready Summary 📄
-Built FactGraph Annotator, a hybrid knowledge graph + semantic retrieval + NLI framework that corrected ~60% of hallucinated LLM predictions on the FEVER benchmark through structured evidence grounding.
-
-Citation 📖
-If using FEVER:
-Thorne et al., FEVER: a Large-scale Dataset for Fact Extraction and VERification (2018)
-
-
-Final Contribution 🏁
+## **Summary  **
 FactGraph demonstrates that:
 Structured external verification can substantially improve LLM factual trustworthiness even when raw standalone classifier accuracy remains lower.
 Main achievement:
 A practical hallucination mitigation framework for safer, more reliable LLM deployment.
 
-Closing Narrative
-FactGraph was built on the belief that powerful AI systems require more than predictive accuracy—they require verifiable trust.
-By combining symbolic knowledge graphs with neural reasoning, FactGraph explores how hybrid architectures can make modern LLM systems:
-Safer
-More explainable
-More trustworthy
-Better suited for real-world deployment.
 
