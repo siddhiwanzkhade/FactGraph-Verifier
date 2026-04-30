@@ -8,7 +8,7 @@
   <img 
     src="https://github.com/user-attachments/assets/5779d15b-7325-4e6c-8f93-9ec3627362cd" 
     alt="FactGraph KG Verification Example"
-    width="750"
+    width="700"
   />
 </p>
 
@@ -24,7 +24,6 @@ This is especially risky in fact verification tasks where the model must decide 
 
 FactGraph-Verifier adds an external verification layer to reduce false certainty and improve factual reliability.
 
----
 
 ---
 
@@ -65,14 +64,13 @@ Rather than replacing LLM reasoning, FactGraph acts as an external verification 
    The system measures how often FactGraph corrects wrong LLM predictions.
 
 ---
----
 
 ## **System Architecture**
 
 
 <img width="1920" height="1080" alt="Untitled (Presentation)" src="https://github.com/user-attachments/assets/704bfbc8-18c4-4499-9605-8882aed07748" />
 
-
+---
 
 ## **Dataset Overview**
 
@@ -148,53 +146,55 @@ python -m spacy download en_core_web_sm
 ```
 
 ## **Neo4j Setup**
-Install Neo4j Desktop
-Start local instance
-Update credentials in project scripts
+- Install Neo4j Desktop
+- Start local instance
+- Update credentials in project scripts
 
 
+---
 
 ## **Tech Stack**
-Python
-spaCy
-Neo4j
-Wikidata API
-Sentence Transformers
-Hugging Face Transformers
-DeBERTa NLI
-LLaMA / Llama-based LLMs labels
-Pandas
-Scikit-learn
+- Python
+- spaCy
+- Neo4j
+- Wikidata API
+- Sentence Transformers
+- Hugging Face Transformers
+- DeBERTa NLI
+- LLaMA / Llama-based LLMs labels
+- Pandas
+- Scikit-learn
 
 ## **Technical Challenges Solved**
-Entity ambiguity
-Property mismatch between claims and KG facts
-Date and nationality normalization
-Occupation and relation normalization
-Missing KG evidence
-Semantic retrieval precision
-Reducing overconfident unsupported predictions
+- Entity ambiguity
+- Property mismatch between claims and KG facts
+- Date and nationality normalization
+- Occupation and relation normalization
+- Missing KG evidence
+- Semantic retrieval precision
+- Reducing overconfident unsupported predictions
 
 ## **Limitations**
-The system depends on the coverage of the Knowledge Graph.
-Some claims require facts that are missing from the current KG.
-Surface-form mismatches can affect retrieval.
-Multi-hop reasoning is limited.
-The system can be conservative and predict NOT ENOUGH INFO when evidence is incomplete.
+- The system depends on the coverage of the Knowledge Graph.
+- Some claims require facts that are missing from the current KG.
+- Surface-form mismatches can affect retrieval.
+- Multi-hop reasoning is limited.
+- The system can be conservative and predict NOT ENOUGH INFO when evidence is incomplete.
 
 ## **Future Work**
-Expanded KG property coverage
-Better entity disambiguation
-Graph-RAG integration
-Cross-encoder semantic reranking
-Multi-hop graph reasoning
-Fine-tuned NLI verification
-Confidence calibration
+- Expanded KG property coverage
+- Better entity disambiguation
+- Graph-RAG integration
+- Cross-encoder semantic reranking
+- Multi-hop graph reasoning
+- Fine-tuned NLI verification
+- Confidence calibration
 
+---
 
 ## **Summary**
 FactGraph-Verifier demonstrates how external knowledge grounding can reduce hallucinated LLM predictions in fact verification tasks.
-While the standalone LLM achieved higher raw accuracy, FactGraph corrected nearly 60% of the LLM’s incorrect predictions by validating claims against Knowledge Graph evidence and NLI-based reasoning.
+While the standalone LLM achieved higher raw accuracy, FactGraph corrected nearly **60%** of the LLM’s incorrect predictions by validating claims against Knowledge Graph evidence and NLI-based reasoning.
 This makes the project useful for building safer and more trustworthy LLM systems where factual reliability matters more than unsupported confidence.
 
-
+---
