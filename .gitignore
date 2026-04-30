@@ -1,0 +1,108 @@
+# -----------------------------
+# Python cache files
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# -----------------------------
+# Virtual environments
+# -----------------------------
+venv/
+env/
+.venv/
+factgraph/
+*.egg-info/
+
+# -----------------------------
+# Jupyter Notebook checkpoints
+# -----------------------------
+.ipynb_checkpoints/
+
+# -----------------------------
+# Secrets / credentials
+# -----------------------------
+.env
+*.env
+config.py
+secrets.json
+
+# -----------------------------
+# Neo4j credentials / local configs
+# -----------------------------
+neo4j.conf
+*.db
+*.dump
+
+# -----------------------------
+# Large raw datasets / local data
+# -----------------------------
+data/
+datasets/
+raw_data/
+processed_data/
+
+# Ignore CSV files only in root folder
+/*.csv
+
+# Keep outputs folder pushable
+!outputs/
+!outputs/**
+
+# -----------------------------
+# Old / duplicate scripts to exclude
+# -----------------------------
+evaluate_nli.py
+sem_fallback_v2.py
+query_kg_new.py
+
+# -----------------------------
+# Model files / embeddings
+# -----------------------------
+models/
+checkpoints/
+embeddings/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.pkl
+*.pickle
+
+# -----------------------------
+# Logs
+# -----------------------------
+logs/
+*.log
+
+# -----------------------------
+# OS files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# IDE files
+# -----------------------------
+.vscode/
+.idea/
+
+# -----------------------------
+# Temporary files
+# -----------------------------
+*.tmp
+*.bak
+*.swp
+
+# Ignore root-level CSV files only
+/*.csv
+
+# Keep outputs folder pushable
+!outputs/
+!outputs/**
+
+# Exclude duplicate scripts
+evaluate_nli.py
+sem_fallback_v2.py
+query_kg_new.py.DS_Store

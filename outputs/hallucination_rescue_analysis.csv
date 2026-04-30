@@ -1,0 +1,498 @@
+claim,gold_label,matched,llm_pred,correct,kg_pred,nli_premise_verbalized,has_evidence,llm_correct,kg_correct,llm_wrong,kg_wrong
+Elizabeth I was the first daughter of Henry VIII.,REFUTES,['henry viii'],REFUTES,True,NOT_ENOUGH_INFO,I has held the position of first daughter.,True,True,False,False,True
+Janet Leigh was Catholic.,NOT_ENOUGH_INFO,['janet leigh'],SUPPORTS,False,SUPPORTS,Janet Leigh is a catholic.,True,False,False,True,True
+Manchester by the Sea is distributed globally.,REFUTES,['manchester'],SUPPORTS,False,REFUTES,manchester is from united kingdom.,True,False,True,True,False
+Gal Gadot was ranked ahead of Shlomit Malka for Israel's highest earning actress/models.,SUPPORTS,['gal gadot'],SUPPORTS,True,NOT_ENOUGH_INFO,gal gadot is a stage actor.,True,True,False,False,True
+Jenny McCarthy was Playmate of the Month.,NOT_ENOUGH_INFO,['jenny mccarthy'],SUPPORTS,False,NOT_ENOUGH_INFO,Jenny McCarthy has held the position of playmate.,True,False,True,True,False
+Anne Boleyn is not mentioned in many artistic and cultural work.,REFUTES,['anne boleyn'],REFUTES,True,REFUTES,anne boleyn is an aristocrat.,True,True,True,False,False
+Recovery is an Eminem song.,REFUTES,['eminem'],SUPPORTS,False,SUPPORTS,Recovery has held the position of eminem song.,True,False,False,True,True
+Omar Khadr was declared innocent.,NOT_ENOUGH_INFO,['omar khadr'],REFUTES,False,REFUTES,omar khadr was born on 1986-09-19.,True,False,False,True,True
+Despacito has a version which features a lengthier bridge.,NOT_ENOUGH_INFO,['despacito'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,,False,True,True,False,False
+Hindu Kush's highest point is the peak called Hindu Kush.,REFUTES,['kush'],REFUTES,True,NOT_ENOUGH_INFO,Kush has held the position of kush.,True,True,False,False,True
+Rick Ross created the Maybach Music Group.,SUPPORTS,['rick ross'],SUPPORTS,True,SUPPORTS,Maybach Music Group was founded by Rick Ross.,True,True,True,False,False
+Kellyanne Conway publicly endorsed the pope.,NOT_ENOUGH_INFO,['kellyanne conway'],REFUTES,False,NOT_ENOUGH_INFO,kellyanne conway is a politician.,True,False,True,True,False
+Gal Gadot was ranked as a top earning actress/model in Israel.,NOT_ENOUGH_INFO,['gal gadot'],SUPPORTS,False,NOT_ENOUGH_INFO,gal gadot is an actor.,True,False,True,True,False
+Oscar de la Hoya retired from fighting in 1990.,REFUTES,['oscar de la hoya'],REFUTES,True,REFUTES,oscar de la hoya is a boxer.,True,True,True,False,False
+Eva Mendes was drafted in 1974.,REFUTES,['eva mendes'],REFUTES,True,SUPPORTS,eva mendes was born on 1974-03-05.,True,True,False,False,True
+Angela Bassett started her film career in 1985 with the film Back to the Future.,NOT_ENOUGH_INFO,['angela bassett'],REFUTES,False,NOT_ENOUGH_INFO,angela bassett is an actor.,True,False,True,True,False
+SpongeBob SquarePants is not an American series.,REFUTES,['spongebob squarepants'],REFUTES,True,NOT_ENOUGH_INFO,spongebob squarepants is associated with the genre adventure television series.,True,True,False,False,True
+John Deighton worked a retail job.,NOT_ENOUGH_INFO,['john deighton'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,john deighton was born on 1791-01-01.,True,True,True,False,False
+Awkward Black Girl features Issa Rae in a leading role.,SUPPORTS,"['issa rae', 'awkward black girl']",SUPPORTS,True,NOT_ENOUGH_INFO,leading role has Awkward Black Girl as a cast member.,True,True,False,False,True
+Jack Falahee is dead.,NOT_ENOUGH_INFO,['jack falahee'],NOT_ENOUGH_INFO,True,SUPPORTS,Jack Falahee is a dead.,True,True,False,False,True
+Jiang Wen is a Chinese cuisine.,REFUTES,['jiang wen'],REFUTES,True,NOT_ENOUGH_INFO,Jiang Wen is a cuisine.,True,True,False,False,True
+The ABC islands are the only part of the Caribbean.,NOT_ENOUGH_INFO,['abc'],REFUTES,False,NOT_ENOUGH_INFO,ABC islands is part of Caribbean.,True,False,True,True,False
+"Keith Urban was only released on October 1, 1991.",REFUTES,['keith urban'],REFUTES,True,REFUTES,keith urban was born on 1967-10-26.,True,True,True,False,False
+Ernest Medina received an acquittal in 1971.,SUPPORTS,['ernest medina'],SUPPORTS,True,NOT_ENOUGH_INFO,Ernest Medina P166 acquittal,True,True,False,False,True
+Northwestern University is a recently added member of the Big Ten Conference.,REFUTES,"['the big ten conference', 'northwestern university']",REFUTES,True,NOT_ENOUGH_INFO,Northwestern University is a member of Big Ten Conference.,True,True,False,False,True
+Martin Van Buren held office.,SUPPORTS,['martin van buren'],SUPPORTS,True,SUPPORTS,martin van buren has held the position of president-elect of the united states.,True,True,True,False,False
+Birthday Song (2 Chainz song) was produced by Kanye West.,REFUTES,['kanye west'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Magic Johnson was a senator.,NOT_ENOUGH_INFO,['magic johnson'],REFUTES,False,SUPPORTS,Magic Johnson is a senator.,True,False,False,True,True
+Alberto Contador was found guilty of an offense.,SUPPORTS,['alberto contador'],SUPPORTS,True,NOT_ENOUGH_INFO,alberto contador was born on 1982-12-06.,True,True,False,False,True
+PBS is a private broadcaster.,REFUTES,['pbs'],REFUTES,True,NOT_ENOUGH_INFO,pbs is from united states.,True,True,False,False,True
+Jamaica is the place where Island Records was founded.,SUPPORTS,['island records'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+The setting of Bongwater is Oregon.,SUPPORTS,['bongwater'],REFUTES,False,NOT_ENOUGH_INFO,setting has held the position of oregon.,True,False,False,True,True
+Britt Robertson works for an actress.,NOT_ENOUGH_INFO,['britt robertson'],SUPPORTS,False,SUPPORTS,Britt Robertson is a member of actress.,True,False,False,True,True
+Sheryl Lee appeared in Annie Hall.,NOT_ENOUGH_INFO,['sheryl lee'],REFUTES,False,NOT_ENOUGH_INFO,sheryl lee is an actor.,True,False,True,True,False
+Richard Kuklinski is alone.,NOT_ENOUGH_INFO,['richard kuklinski'],NOT_ENOUGH_INFO,True,SUPPORTS,Richard Kuklinski is an alone.,True,True,False,False,True
+UNESCO's City of Literature program is a section of its Creative Cities Network.,SUPPORTS,['unesco'],SUPPORTS,True,NOT_ENOUGH_INFO,unesco is headquartered in paris.,True,True,False,False,True
+Luis Fonsi does not go by his given name on stage.,SUPPORTS,['luis fonsi'],SUPPORTS,True,REFUTES,luis fonsi is a singer.,True,True,False,False,True
+Tinker Tailor Soldier Spy stars Colin Firth and Jonah Hill.,NOT_ENOUGH_INFO,['jonah hill'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+A&E is a cable and satellite television network.,SUPPORTS,['a&e'],SUPPORTS,True,NOT_ENOUGH_INFO,a&e is from united states.,True,True,False,False,True
+Ted Cruz was born in 1970.,SUPPORTS,['ted cruz'],SUPPORTS,True,SUPPORTS,Ted Cruz was born on 1970.,True,True,True,False,False
+Lou Gehrig got more votes than anyone else on the Major League Baseball All-Century Team in 1987.,REFUTES,['lou gehrig'],REFUTES,True,NOT_ENOUGH_INFO,lou gehrig has received the major league baseball most valuable player award award.,True,True,False,False,True
+American Idol (season 8) had Simon Cowell as a contestant.,NOT_ENOUGH_INFO,"['simon cowell', 'idol']",REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Rupert Murdoch has been employed since at least 1979.,SUPPORTS,['rupert murdoch'],SUPPORTS,True,NOT_ENOUGH_INFO,rupert murdoch is an entrepreneur.,True,True,False,False,True
+Fred Seibert has a career as a blues and rock record producer.,NOT_ENOUGH_INFO,['fred seibert'],SUPPORTS,False,REFUTES,fred seibert is a television producer.,True,False,False,True,True
+Baz Luhrmann's film Australia is solely an epic historical romantic comedy.,SUPPORTS,['baz luhrmann'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+A subsidiary of Walt Disney Studios distributed The Mighty Ducks.,NOT_ENOUGH_INFO,['disney'],SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Brazzers is a pornographic production company based in Montreal.,SUPPORTS,['brazzers'],SUPPORTS,True,NOT_ENOUGH_INFO,Brazzers is a company.,True,True,False,False,True
+Roswell was co-written by Jason Katims's daughter.,NOT_ENOUGH_INFO,"['roswell', 'jason katims']",NOT_ENOUGH_INFO,True,REFUTES,roswell was founded on 1869-01-01.,True,True,False,False,True
+Gotham City Sirens was written by a woman.,REFUTES,['gotham city sirens'],SUPPORTS,False,NOT_ENOUGH_INFO,gotham city sirens is from of origin united states.,True,False,False,True,True
+Renato Balestra came from a family of mechanics.,REFUTES,['renato balestra'],REFUTES,True,NOT_ENOUGH_INFO,renato balestra is a fashion designer.,True,True,False,False,True
+Designated Survivor (TV series) was founded on ABC.,NOT_ENOUGH_INFO,['abc'],SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Annette Badland was not part of the cast of Doctor Who.,REFUTES,['annette badland'],REFUTES,True,REFUTES,Annette Badland is part of cast of Doctor Who.,True,True,True,False,False
+Gaius Julius Caesar never participated in politics.,REFUTES,"['julius caesar', 'gaius julius caesar']",REFUTES,True,REFUTES,gaius julius caesar is a politician.,True,True,True,False,False
+Murda Beatz is north Canadian.,NOT_ENOUGH_INFO,['murda beatz'],SUPPORTS,False,NOT_ENOUGH_INFO,Murda Beatz is a citizen of Canada.,True,False,True,True,False
+Chaka Khan had a music hit featuring at least one person.,SUPPORTS,['chaka khan'],SUPPORTS,True,NOT_ENOUGH_INFO,chaka khan is a singer.,True,True,False,False,True
+Kyra Sedgwick has yet to have a role in a series.,REFUTES,['kyra sedgwick'],REFUTES,True,REFUTES,kyra sedgwick is an actor.,True,True,True,False,False
+The Washington Monument is a copy of the Lincoln Memorial.,NOT_ENOUGH_INFO,['lincoln'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Bessie Smith sang the blues.,SUPPORTS,['bessie smith'],SUPPORTS,True,SUPPORTS,bessie smith is associated with the genre blues.,True,True,True,False,False
+Shawn Carlson is American and German.,NOT_ENOUGH_INFO,['shawn carlson'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,Shawn Carlson is a citizen of United States.,True,True,True,False,False
+"Matt Bomer was only born on May 11, 1977.",REFUTES,['matt bomer'],REFUTES,True,NOT_ENOUGH_INFO,"Matt Bomer was born on May 11, 1977.",True,True,False,False,True
+Sophia Bush was only in horror films.,REFUTES,['sophia bush'],REFUTES,True,NOT_ENOUGH_INFO,sophia bush is a film actor.,True,True,False,False,True
+"After Jawaharlal Nehru, Manmohan Singh was a prime minister.",SUPPORTS,['manmohan singh'],REFUTES,False,NOT_ENOUGH_INFO,Jawaharlal Nehru is a minister.,True,False,False,True,True
+"The Lincoln-Douglas debates happened in Freeport, Illinois.",SUPPORTS,['lincoln'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Soyuz is still in service as a set of satellites.,NOT_ENOUGH_INFO,['soyuz'],REFUTES,False,NOT_ENOUGH_INFO,soyuz is from russia.,True,False,True,True,False
+Manchester United F.C. was never the world's highest-earning football club.,REFUTES,['manchester'],REFUTES,True,REFUTES,Manchester United F.C has held the position of club.,True,True,True,False,False
+Chris Benoit's middle name is Jason.,REFUTES,['chris benoit'],REFUTES,True,NOT_ENOUGH_INFO,Chris Benoit has held the position of jason.,True,True,False,False,True
+Michaela Watkins full name is Michaela Ruth Watkins.,REFUTES,['michaela watkins'],SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+PBS is a film distributor.,NOT_ENOUGH_INFO,['pbs'],REFUTES,False,NOT_ENOUGH_INFO,PBS was directed by PBS.,True,False,True,True,False
+Manchester United is based in New England.,REFUTES,['manchester'],REFUTES,True,SUPPORTS,Manchester United P159 New England,True,True,False,False,True
+"There are currently 15,882,417 Mormon members as of April 2017.",NOT_ENOUGH_INFO,['mormon'],SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Angela Bassett received a SAG Award.,NOT_ENOUGH_INFO,['angela bassett'],SUPPORTS,False,SUPPORTS,Angela Bassett P166 SAG Award,True,False,False,True,True
+Sam Claflin is an actor in films like Pirates of the Caribbean.,NOT_ENOUGH_INFO,['sam claflin'],SUPPORTS,False,NOT_ENOUGH_INFO,Sam Claflin is an actor.,True,False,True,True,False
+"Simón Bolívar died on December 17th, 1830 in Bolivia.",NOT_ENOUGH_INFO,['simón bolívar'],REFUTES,False,NOT_ENOUGH_INFO,"Simón Bolívar died on December 17th, 1830.",True,False,True,True,False
+The Chrysler Building was the world's tallest building for 8 months.,REFUTES,['the chrysler building'],SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+Freddie Highmore starred in the television series Bates Motel.,SUPPORTS,['freddie highmore'],SUPPORTS,True,SUPPORTS,television series Bates Motel has Freddie Highmore as a cast member.,True,True,True,False,False
+Manchester by the Sea has grossed money.,SUPPORTS,['manchester'],SUPPORTS,True,NOT_ENOUGH_INFO,manchester is from united kingdom.,True,True,False,False,True
+B. R. Ambedkar lived in Bhutan.,NOT_ENOUGH_INFO,['b. r. ambedkar'],REFUTES,False,REFUTES,b. r. ambedkar is a citizen of india.,True,False,False,True,True
+Prague's historic center was first included in the UNESCO list of World Heritage Sites in 1992.,SUPPORTS,['unesco'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Gaius Julius Caesar was the uncle of a dictator.,NOT_ENOUGH_INFO,"['julius caesar', 'gaius julius caesar']",REFUTES,False,REFUTES,gaius julius caesar has held the position of roman dictator.,True,False,False,True,True
+"Aleister Crowley was born on June 12, 1875.",REFUTES,['aleister crowley'],SUPPORTS,False,SUPPORTS,"Aleister Crowley was born on June 12, 1875.",True,False,False,True,True
+The first NBA Finals title Chris Bosh won was in 2012.,SUPPORTS,['nba'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Humphrey Bogart does acting.,SUPPORTS,['humphrey bogart'],SUPPORTS,True,SUPPORTS,humphrey bogart is a character actor.,True,True,True,False,False
+Rick Ross made more than eight studio albums.,REFUTES,['rick ross'],SUPPORTS,False,NOT_ENOUGH_INFO,rick ross is a songwriter.,True,False,False,True,True
+Michael Vick has only ever played the sport of golf.,REFUTES,['michael vick'],REFUTES,True,REFUTES,michael vick is an american football player.,True,True,True,False,False
+Eva Green had the lead role in The Dreamers.,NOT_ENOUGH_INFO,['eva green'],SUPPORTS,False,NOT_ENOUGH_INFO,eva green is an actor.,True,False,True,True,False
+Damon Albarn has released something.,SUPPORTS,['damon albarn'],SUPPORTS,True,SUPPORTS,Damon Albarn is signed to Damon Albarn.,True,True,True,False,False
+Natasha Lyonne is not known as Natasha Bianca Lyonne Braunstein.,REFUTES,['natasha lyonne'],REFUTES,True,REFUTES,natasha lyonne is an actor.,True,True,True,False,False
+Marcus Bentley is a broadcaster.,SUPPORTS,['marcus bentley'],SUPPORTS,True,NOT_ENOUGH_INFO,marcus bentley is a television actor.,True,True,False,False,True
+XHamster produces online content.,SUPPORTS,['xhamster'],SUPPORTS,True,NOT_ENOUGH_INFO,xhamster operates in the pornography industry.,True,True,False,False,True
+Eva Green had a career in film.,SUPPORTS,['eva green'],SUPPORTS,True,SUPPORTS,eva green is an actor.,True,True,True,False,False
+Thomas Jefferson is incapable of being a presidential scholar.,NOT_ENOUGH_INFO,['thomas jefferson'],REFUTES,False,REFUTES,Thomas Jefferson is a president.,True,False,False,True,True
+Villa Park hosted an event.,SUPPORTS,['villa park'],NOT_ENOUGH_INFO,False,NOT_ENOUGH_INFO,villa park is from united kingdom.,True,False,False,True,True
+Menace II Society is set in Montana.,REFUTES,['menace ii society'],REFUTES,True,NOT_ENOUGH_INFO,menace ii society was born on 1981-06-20.,True,True,False,False,True
+Youtube is unranked.,REFUTES,['youtube'],NOT_ENOUGH_INFO,False,SUPPORTS,Youtube is an unranked.,True,False,False,True,True
+Annette Badland was in Wizards vs Aliens.,SUPPORTS,['annette badland'],SUPPORTS,True,NOT_ENOUGH_INFO,Annette Badland is a member of Wizards.,True,True,False,False,True
+"Weekly Idol is hosted by Jeong Hyeong-don, a comedian and actor.",NOT_ENOUGH_INFO,"['idol', 'jeong hyeong-don']",SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Blank Space is on a top 100 list in numerous countries.,NOT_ENOUGH_INFO,['blank space'],SUPPORTS,False,REFUTES,blank space is signed to republic records.,True,False,False,True,True
+Richard Dawkins has yet to appear on the radio.,REFUTES,['richard dawkins'],NOT_ENOUGH_INFO,False,REFUTES,richard dawkins is a writer.,True,False,True,True,False
+Dreamer (2005 film) was reviewed by John Gatins.,NOT_ENOUGH_INFO,['john gatins'],SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Miranda Otto began her film acting career at age 18.,SUPPORTS,['miranda otto'],SUPPORTS,True,NOT_ENOUGH_INFO,Miranda Otto was founded by Miranda Otto.,True,True,False,False,True
+Luis Fonsi is a prime minister.,REFUTES,['luis fonsi'],REFUTES,True,NOT_ENOUGH_INFO,Luis Fonsi is a minister.,True,True,False,False,True
+Thomas Jefferson retired from private office.,NOT_ENOUGH_INFO,['thomas jefferson'],SUPPORTS,False,REFUTES,thomas jefferson is a politician.,True,False,False,True,True
+Danny Brown named his third album XXXX.,REFUTES,['danny brown'],REFUTES,True,NOT_ENOUGH_INFO,danny brown is a songwriter.,True,True,False,False,True
+Automated teller machines are part of Bank of America.,SUPPORTS,['bank of america'],SUPPORTS,True,NOT_ENOUGH_INFO,teller machines is part of Bank of America.,True,True,False,False,True
+The Colosseum is in a city in Italy.,REFUTES,['colosseum'],SUPPORTS,False,SUPPORTS,colosseum is from italy.,True,False,False,True,True
+Christian Gottlob Neefe was born in February 1748.,SUPPORTS,['christian gottlob neefe'],SUPPORTS,True,SUPPORTS,Christian Gottlob Neefe was born on February 1748.,True,True,True,False,False
+The Independent Spirit Awards are held in the hotel before the Academy Awards.,REFUTES,['the academy awards'],NOT_ENOUGH_INFO,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+Kevin Bacon was in the film Sleepers.,SUPPORTS,['kevin bacon'],SUPPORTS,True,NOT_ENOUGH_INFO,kevin bacon is a character actor.,True,True,False,False,True
+Matthias Corvinus patronized art and science during the European Renaissance.,SUPPORTS,['matthias corvinus'],SUPPORTS,True,NOT_ENOUGH_INFO,matthias corvinus is a monarch.,True,True,False,False,True
+Paul von Hindenburg was a military officer.,SUPPORTS,['paul von hindenburg'],SUPPORTS,True,SUPPORTS,Paul von Hindenburg is a military officer.,True,True,True,False,False
+The House of the Spirits won awards.,SUPPORTS,['the house of the spirits'],SUPPORTS,True,SUPPORTS,House of the Spirits P166 awards,True,True,True,False,False
+"For five years, The Mod Squad was broadcast on ABC.",NOT_ENOUGH_INFO,"['the mod squad', 'abc']",SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+"The Hungarian invasions were ended by Otto I, Holy Roman Emperor.",SUPPORTS,['otto i'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Jean-Michel Basquiat died in a restaurant.,NOT_ENOUGH_INFO,['jean-michel basquiat'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Anne Boleyn was in England in 1522.,SUPPORTS,['anne boleyn'],SUPPORTS,True,REFUTES,anne boleyn died on 1536-05-29.,True,True,False,False,True
+Ed Gagliardi permanently recovered from cancer.,REFUTES,['ed gagliardi'],REFUTES,True,REFUTES,ed gagliardi died on 2014-05-11.,True,True,True,False,False
+"Doug Petrie only played ""Bad Horse"" in Dr. Horrible's Sing-Along Blog.",REFUTES,['doug petrie'],REFUTES,True,NOT_ENOUGH_INFO,Dr. Horrible's Sing-Along Blog has Doug Petrie as a cast member.,True,True,False,False,True
+Jed Whedon is a Brazilian citizen.,NOT_ENOUGH_INFO,['jed whedon'],REFUTES,False,NOT_ENOUGH_INFO,Jed Whedon is a citizen.,True,False,True,True,False
+David Lloyd George was voted the third greatest British model of the 20th century.,NOT_ENOUGH_INFO,['david lloyd george'],REFUTES,False,NOT_ENOUGH_INFO,david lloyd george is a politician.,True,False,True,True,False
+US Airways Flight 1549 was piloted by Amelia Earhart and Charles Lindbergh.,REFUTES,['us airways'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+"Diana, Princess of Wales was joined in matrimony.",NOT_ENOUGH_INFO,['wales'],SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Alberto Contador initially won the Grand Prix.,NOT_ENOUGH_INFO,['alberto contador'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,Alberto Contador P166 Grand Prix,True,True,True,False,False
+Ricardo Montalbán acted in film and television.,SUPPORTS,['ricardo montalbán'],SUPPORTS,True,NOT_ENOUGH_INFO,ricardo montalbán is a film director.,True,True,False,False,True
+Kaya Scodelario was nominated for two Emmy Award.,NOT_ENOUGH_INFO,['kaya scodelario'],REFUTES,False,NOT_ENOUGH_INFO,kaya scodelario is a television actor.,True,False,True,True,False
+"On October 11, 1977, Matt Bomer was born.",SUPPORTS,['matt bomer'],REFUTES,False,SUPPORTS,"Matt Bomer was born on October 11, 1977.",True,False,True,True,False
+Charles Manson was the leader of what would later be known as the Manson Family.,SUPPORTS,['charles manson'],SUPPORTS,True,NOT_ENOUGH_INFO,Charles Manson has held the position of leader.,True,True,False,False,True
+Diwali supports evil over good.,REFUTES,['diwali'],REFUTES,True,NOT_ENOUGH_INFO,diwali is from india.,True,True,False,False,True
+Gaius Julius Caesar died in 65 BC.,REFUTES,"['julius caesar', 'gaius julius caesar', 'bc']",REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Anne Rice was born in Fort Lauderdale.,REFUTES,['anne rice'],REFUTES,True,SUPPORTS,Anne Rice was born in Fort Lauderdale.,True,True,False,False,True
+The Cyclades are in the statistically most dangerous region of the world.,NOT_ENOUGH_INFO,['cyclades'],REFUTES,False,NOT_ENOUGH_INFO,cyclades is from greece.,True,False,True,True,False
+Tim McGraw played a role in The Blind Side.,SUPPORTS,['tim mcgraw'],SUPPORTS,True,SUPPORTS,Blind Side has Tim McGraw as a cast member.,True,True,True,False,False
+San Diego Comic-Con was not founded in 1970.,REFUTES,['san diego comic-con'],REFUTES,True,REFUTES,san diego comic-con was founded on 1969-01-01.,True,True,True,False,False
+Paul von Hindenburg was a person.,SUPPORTS,['paul von hindenburg'],SUPPORTS,True,SUPPORTS,Paul von Hindenburg is a person.,True,True,True,False,False
+Tim McGraw had a supporting role in the Watergate scandal.,NOT_ENOUGH_INFO,['tim mcgraw'],REFUTES,False,NOT_ENOUGH_INFO,tim mcgraw is an actor.,True,False,True,True,False
+Joe Rogan was a person.,SUPPORTS,['joe rogan'],SUPPORTS,True,SUPPORTS,Joe Rogan is a person.,True,True,True,False,False
+Bethany Hamilton was a victim of a bear attack.,NOT_ENOUGH_INFO,['bethany hamilton'],REFUTES,False,NOT_ENOUGH_INFO,Bethany Hamilton has held the position of victim.,True,False,True,True,False
+"In the year 2009, Rick Ross made a record label.",SUPPORTS,['rick ross'],NOT_ENOUGH_INFO,False,NOT_ENOUGH_INFO,rick ross is signed to atlantic records.,True,False,False,True,True
+The Office (US) debuted on ESPN.,REFUTES,['the office (us'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Stephen Hillenburg died in Oklahoma.,REFUTES,['stephen hillenburg'],REFUTES,True,SUPPORTS,Stephen Hillenburg place of death Oklahoma,True,True,False,False,True
+Leonard Nimoy created a computer game.,NOT_ENOUGH_INFO,['leonard nimoy'],SUPPORTS,False,REFUTES,leonard nimoy is associated with the genre science fiction.,True,False,False,True,True
+"Alice Cooper's full name is Vincent Damon Furnier, which was given to him at birth.",NOT_ENOUGH_INFO,['alice cooper'],SUPPORTS,False,REFUTES,alice cooper is an actor.,True,False,False,True,True
+José Ferrer played the part of Cyrano de Bergerac in 1947.,NOT_ENOUGH_INFO,['josé ferrer'],SUPPORTS,False,NOT_ENOUGH_INFO,1947 has José Ferrer as a cast member.,True,False,True,True,False
+Island Records are involved with the community in Jamaica.,NOT_ENOUGH_INFO,['island records'],SUPPORTS,False,NOT_ENOUGH_INFO,island records is from jamaica.,True,False,True,True,False
+Charles de Gaulle is the basis of a German political stance.,NOT_ENOUGH_INFO,['charles de gaulle'],REFUTES,False,NOT_ENOUGH_INFO,Charles de Gaulle is a citizen of Germany.,True,False,True,True,False
+Henry III of France was succeeded by Henry IV.,SUPPORTS,['henry iii'],SUPPORTS,True,NOT_ENOUGH_INFO,henry iii is a monarch.,True,True,False,False,True
+Liam Neeson has been nominated for a British Academy of Film and Television Arts Award for Best Actor.,SUPPORTS,"['liam neeson', 'best actor']",SUPPORTS,True,REFUTES,liam neeson has received the los angeles film critics association award for best actor award.,True,True,False,False,True
+Harold Macmillan was fully German.,REFUTES,['harold macmillan'],REFUTES,True,NOT_ENOUGH_INFO,Harold Macmillan is a citizen of Germany.,True,True,False,False,True
+Michaela Watkins is American.,SUPPORTS,['michaela watkins'],SUPPORTS,True,SUPPORTS,Michaela Watkins is a citizen of United States.,True,True,True,False,False
+Jack Dylan Grazer's grandparents are Angela Lafever and Gavin Grazer.,REFUTES,['jack dylan grazer'],SUPPORTS,False,NOT_ENOUGH_INFO,Jack Dylan Grazer has held the position of angela lafever.,True,False,False,True,True
+Folklore includes bears.,NOT_ENOUGH_INFO,['folklore'],SUPPORTS,False,NOT_ENOUGH_INFO,folklore is from of origin united states.,True,False,True,True,False
+Cary Elwes is illiterate.,REFUTES,['cary elwes'],REFUTES,True,SUPPORTS,Cary Elwes is an illiterate.,True,True,False,False,True
+Antigua has a native population known as the Antiguan.,NOT_ENOUGH_INFO,['antigua'],REFUTES,False,NOT_ENOUGH_INFO,antigua is from antigua and barbuda.,True,False,True,True,False
+Tom DeLonge formed a band on a space station.,NOT_ENOUGH_INFO,['tom delonge'],REFUTES,False,NOT_ENOUGH_INFO,tom delonge is a singer.,True,False,True,True,False
+Sausage Party was only written by Barack Obama.,REFUTES,['barack obama'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Noel Fisher starred in True Detective.,NOT_ENOUGH_INFO,['noel fisher'],SUPPORTS,False,SUPPORTS,True Detective has Noel Fisher as a cast member.,True,False,False,True,True
+Ashton Kutcher was co-stars with Emma Watson.,NOT_ENOUGH_INFO,"['ashton kutcher', 'emma watson']",REFUTES,False,NOT_ENOUGH_INFO,Ashton Kutcher has held the position of costars.,True,False,True,True,False
+Randy Savage wears his hair long.,NOT_ENOUGH_INFO,['randy savage'],SUPPORTS,False,NOT_ENOUGH_INFO,randy savage is a professional wrestler.,True,False,True,True,False
+Bruce Shand was awarded the Military Cross.,SUPPORTS,['bruce shand'],SUPPORTS,True,SUPPORTS,Bruce Shand P166 Military Cross,True,True,True,False,False
+Alvin and the Chipmunks is a Canadian film.,REFUTES,['alvin'],REFUTES,True,NOT_ENOUGH_INFO,Alvin is a film.,True,True,False,False,True
+The maximum elevation in the Hindu Kush is 7708 meters at K2.,REFUTES,['kush'],REFUTES,True,NOT_ENOUGH_INFO,elevation has held the position of 7708 meters.,True,True,False,False,True
+"Richard Dawson's date of birth was November 20, 1932.",SUPPORTS,['richard dawson'],SUPPORTS,True,SUPPORTS,richard dawson was born on 1932-11-20.,True,True,True,False,False
+Jennifer Lopez's The Remixes was not the first in history to debut at number one on the U.S. Billboard 200.,REFUTES,['jennifer lopez'],REFUTES,True,REFUTES,Remixes is a first.,True,True,True,False,False
+Temple Grandin is only a 2013 documentary film.,REFUTES,['temple grandin'],REFUTES,True,REFUTES,Temple Grandin has held the position of film.,True,True,True,False,False
+Harold Macmillan died in 1986.,SUPPORTS,['harold macmillan'],SUPPORTS,True,SUPPORTS,Harold Macmillan died on 1986.,True,True,True,False,False
+"Simon Pegg was born on February 14th, 1860.",REFUTES,['simon pegg'],REFUTES,True,SUPPORTS,"Simon Pegg was born on February 14th, 1860.",True,True,False,False,True
+Larry Wilmore is American.,SUPPORTS,['larry wilmore'],SUPPORTS,True,SUPPORTS,Larry Wilmore is a citizen of United States.,True,True,True,False,False
+Renato Balestra came from a family.,SUPPORTS,['renato balestra'],SUPPORTS,True,NOT_ENOUGH_INFO,renato balestra was born on 1924-05-03.,True,True,False,False,True
+Jean-Michel Basquiat died in his studio.,SUPPORTS,['jean-michel basquiat'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+Stephen Moyer and Ron Perlman worked together.,SUPPORTS,['stephen moyer'],SUPPORTS,True,REFUTES,stephen moyer is a television director.,True,True,False,False,True
+Lizzy Caplan is incapable of starring in television show like Party Down.,REFUTES,['lizzy caplan'],REFUTES,True,NOT_ENOUGH_INFO,Lizzy Caplan has held the position of incapable.,True,True,False,False,True
+Bradley Fuller is a plumber.,NOT_ENOUGH_INFO,['bradley fuller'],NOT_ENOUGH_INFO,True,REFUTES,bradley fuller was born on 1995-10-13.,True,True,False,False,True
+"Baz Luhrmann's film Australia stars an Australian actor, singer, and pet owner.",NOT_ENOUGH_INFO,['baz luhrmann'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,,False,True,True,False,False
+The Chrysler Building was surpassed in height in 2008.,NOT_ENOUGH_INFO,['the chrysler building'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Emma Watson was born in the 15th of April 1990.,SUPPORTS,['emma watson'],REFUTES,False,SUPPORTS,Emma Watson was born on 15th of April 1990.,True,False,True,True,False
+Sonny & Cher are R&B singers.,NOT_ENOUGH_INFO,['cher'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Bea Arthur was born under a different name.,SUPPORTS,['bea arthur'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Marjorie Gross wrote for a television show on ABC.,NOT_ENOUGH_INFO,"['abc', 'marjorie gross']",SUPPORTS,False,NOT_ENOUGH_INFO,marjorie gross is a television producer.,True,False,True,True,False
+Jamie Lee Curtis starred in John Carpenter's Halloween.,SUPPORTS,['jamie lee curtis'],SUPPORTS,True,NOT_ENOUGH_INFO,Halloween has Jamie Lee Curtis as a cast member.,True,True,False,False,True
+Carlos Santana is a comedian.,REFUTES,['carlos santana'],REFUTES,True,SUPPORTS,Carlos Santana is a comedian.,True,True,False,False,True
+The Nine Network had a live broadcast of the latest ceremony of the Logie Awards.,NOT_ENOUGH_INFO,['logie awards'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,,False,True,True,False,False
+James Brolin was born in Georgia.,NOT_ENOUGH_INFO,['james brolin'],REFUTES,False,SUPPORTS,James Brolin was born in Georgia.,True,False,False,True,True
+The Late Show with Stephen Colbert is hosted by Stephen Colbert.,SUPPORTS,['stephen colbert'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Ed Gagliardi died of brain cancer.,NOT_ENOUGH_INFO,['ed gagliardi'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Harvard University is a thousand square feet.,NOT_ENOUGH_INFO,['harvard university'],REFUTES,False,NOT_ENOUGH_INFO,harvard university is from united states.,True,False,True,True,False
+"Murda Beatz is from San Diego, California.",REFUTES,['murda beatz'],REFUTES,True,SUPPORTS,Murda Beatz is a citizen of San Diego.,True,True,False,False,True
+Pearl Jam is a rock band.,SUPPORTS,['pearl jam'],SUPPORTS,True,NOT_ENOUGH_INFO,Pearl Jam is a band.,True,True,False,False,True
+"The current President of Lockheed Martin, since 2010, is Marillyn Hewson.",NOT_ENOUGH_INFO,['lockheed'],REFUTES,False,NOT_ENOUGH_INFO,President has held the position of marillyn hewson.,True,False,True,True,False
+Sabbir Khan made his film producing debut in 2009.,NOT_ENOUGH_INFO,['sabbir khan'],NOT_ENOUGH_INFO,True,REFUTES,sabbir khan is a researcher.,True,True,False,False,True
+Stephen King has published 54 novels.,SUPPORTS,['stephen king'],NOT_ENOUGH_INFO,False,NOT_ENOUGH_INFO,stephen king is associated with the genre science fiction.,True,False,False,True,True
+Drake Bell doesn't sing.,REFUTES,"['drake', 'drake bell']",REFUTES,True,REFUTES,drake bell is a singer.,True,True,True,False,False
+A.J. Styles won a championship.,SUPPORTS,['a.j. styles'],SUPPORTS,True,SUPPORTS,A.J. Styles P166 championship,True,True,True,False,False
+Gordon Ramsay has not promoted any chefs.,REFUTES,['gordon ramsay'],REFUTES,True,REFUTES,gordon ramsay is a chef.,True,True,True,False,False
+Drake Bell released an extended play in 2009.,NOT_ENOUGH_INFO,"['drake', 'drake bell']",SUPPORTS,False,NOT_ENOUGH_INFO,drake bell is associated with the genre pop music.,True,False,True,True,False
+Craig David has avoided performing popular music his entire life.,NOT_ENOUGH_INFO,['craig david'],REFUTES,False,REFUTES,craig david is associated with the genre pop music.,True,False,False,True,True
+Olympic medals displayed the Colosseum from 1928 to 2004.,SUPPORTS,['colosseum'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+The White House Press Secretary is an official.,SUPPORTS,['the white house'],SUPPORTS,True,NOT_ENOUGH_INFO,Press Secretary has held the position of official.,True,True,False,False,True
+Janelle Monáe is a singer and a songwriter in Hollywood.,NOT_ENOUGH_INFO,['janelle monáe'],SUPPORTS,False,NOT_ENOUGH_INFO,Janelle Monáe is a singer.,True,False,True,True,False
+Soyuz is still in space.,NOT_ENOUGH_INFO,['soyuz'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,soyuz is from russia.,True,True,True,False,False
+The Vandals were an East Germanic religion.,REFUTES,['vandals'],REFUTES,True,NOT_ENOUGH_INFO,vandals is from vandal kingdom.,True,True,False,False,True
+Tom DeLonge formed a band with Noam Chomsky and Tom Petty.,NOT_ENOUGH_INFO,['tom delonge'],REFUTES,False,REFUTES,tom delonge is a singer.,True,False,False,True,True
+Jean-Jacques Dessalines was a pacifist and was non-warring.,NOT_ENOUGH_INFO,['jean-jacques dessalines'],REFUTES,False,SUPPORTS,Jean-Jacques Dessalines is a pacifist.,True,False,False,True,True
+Cary Elwes writes.,SUPPORTS,['cary elwes'],SUPPORTS,True,SUPPORTS,Cary Elwes was written by Cary Elwes.,True,True,True,False,False
+The Hindu Kush is a mountain range.,SUPPORTS,['kush'],SUPPORTS,True,SUPPORTS,Hindu Kush has held the position of mountain range.,True,True,True,False,False
+Valencia is in a country.,SUPPORTS,['valencia'],SUPPORTS,True,SUPPORTS,valencia is from spain.,True,True,True,False,False
+L.A. Reid has been the CEO of Arista Records.,SUPPORTS,"['l.a. reid', 'arista records']",SUPPORTS,True,NOT_ENOUGH_INFO,L.A. Reid is a ceo.,True,True,False,False,True
+Oscar de la Hoya was The Ring magazine's top-rated fighter in the world in 1997.,NOT_ENOUGH_INFO,['oscar de la hoya'],SUPPORTS,False,NOT_ENOUGH_INFO,Oscar de la Hoya has held the position of fighter.,True,False,True,True,False
+Sean Gunn has no experience as an actor.,REFUTES,['sean gunn'],REFUTES,True,REFUTES,sean gunn is an actor.,True,True,True,False,False
+Jack Falahee is from America.,SUPPORTS,['jack falahee'],SUPPORTS,True,SUPPORTS,Jack Falahee is a citizen of America.,True,True,True,False,False
+Animated programs have been produced by Fred Seibert.,SUPPORTS,['fred seibert'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Tinker Tailor Soldier Spy stars Ben Stiller.,NOT_ENOUGH_INFO,['ben stiller'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Michael Vick is a former football quarterback in the NFL.,SUPPORTS,['michael vick'],SUPPORTS,True,NOT_ENOUGH_INFO,Michael Vick has held the position of quarterback.,True,True,False,False,True
+William Howard Taft only accepted offers of appointment to a United States court.,REFUTES,['william howard taft'],REFUTES,True,REFUTES,william howard taft has held the position of chief justice of the united states.,True,True,True,False,False
+Pixar exclusively animated Despicable Me 2.,REFUTES,['pixar'],REFUTES,True,NOT_ENOUGH_INFO,pixar was founded on 1986-02-03.,True,True,False,False,True
+Liverpool was the town where The Beatles formed.,SUPPORTS,"['beatles', 'liverpool']",SUPPORTS,True,NOT_ENOUGH_INFO,liverpool is from united kingdom.,True,True,False,False,True
+Antigua and Barbuda was named by Christopher Columbus in 1493.,SUPPORTS,"['antigua', 'barbuda']",REFUTES,False,REFUTES,antigua is from antigua and barbuda.,True,False,False,True,True
+The State of Palestine designates East Jerusalem as writers' quarter.,NOT_ENOUGH_INFO,['the state of palestine'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,,False,True,True,False,False
+Billie Joe Armstrong is an American farmer.,NOT_ENOUGH_INFO,['billie joe armstrong'],REFUTES,False,NOT_ENOUGH_INFO,Billie Joe Armstrong is a farmer.,True,False,True,True,False
+Vic Mensa has been nominated for a Grammy Award.,SUPPORTS,"['vic mensa', 'grammy']",SUPPORTS,True,NOT_ENOUGH_INFO,vic mensa is a singer.,True,True,False,False,True
+Earl Scruggs played bluegrass music.,SUPPORTS,['earl scruggs'],SUPPORTS,True,SUPPORTS,earl scruggs is associated with the genre bluegrass music.,True,True,True,False,False
+Drake Bell put out an extended play in 2011.,SUPPORTS,"['drake', 'drake bell']",SUPPORTS,True,REFUTES,drake bell was born on 1986-06-27.,True,True,False,False,True
+Kareem Abdul-Jabbar is not ranked 3rd all-time in blocks.,REFUTES,['kareem abdul-jabbar'],REFUTES,True,REFUTES,kareem abdul-jabbar has received the nba most valuable player award award.,True,True,True,False,False
+Jonah Hill made $16 million dollars in June of 2014.,REFUTES,['jonah hill'],NOT_ENOUGH_INFO,False,REFUTES,jonah hill was born on 1983-12-20.,True,False,True,True,False
+Aarhus is the seat of Aarhus municipality.,SUPPORTS,['aarhus'],SUPPORTS,True,SUPPORTS,aarhus is from denmark.,True,True,True,False,False
+Kenny Chesney is a philanthropist.,NOT_ENOUGH_INFO,['kenny chesney'],SUPPORTS,False,SUPPORTS,Kenny Chesney is a philanthropist.,True,False,False,True,True
+The first follower of Sikhism in office was Manmohan Singh.,NOT_ENOUGH_INFO,['manmohan singh'],SUPPORTS,False,NOT_ENOUGH_INFO,follower has held the position of manmohan singh.,True,False,True,True,False
+"Bruce Shand died on Sunday, June 11th, 2006.",NOT_ENOUGH_INFO,['bruce shand'],SUPPORTS,False,SUPPORTS,"Bruce Shand died on Sunday, June 11th, 2006.",True,False,False,True,True
+Kareem Abdul-Jabbar is ranked 3rd all-time in free throws.,NOT_ENOUGH_INFO,['kareem abdul-jabbar'],REFUTES,False,REFUTES,kareem abdul-jabbar has received the nba most valuable player award award.,True,False,False,True,True
+Richard Dawson is dead.,SUPPORTS,['richard dawson'],SUPPORTS,True,SUPPORTS,Richard Dawson is a dead.,True,True,True,False,False
+Nestor Carbonell only starred in HBO series.,REFUTES,"['hbo', 'nestor carbonell']",REFUTES,True,NOT_ENOUGH_INFO,HBO series has Nestor Carbonell as a cast member.,True,True,False,False,True
+Yara Shahidi is only German.,NOT_ENOUGH_INFO,['yara shahidi'],REFUTES,False,NOT_ENOUGH_INFO,Yara Shahidi is a citizen of Germany.,True,False,True,True,False
+There is a French-British actress named Emma Watson.,SUPPORTS,['emma watson'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+Kevin Bacon has yet to be in a film.,REFUTES,['kevin bacon'],REFUTES,True,REFUTES,kevin bacon is an actor.,True,True,True,False,False
+Rupert Murdoch has worked since at least 1354.,REFUTES,['rupert murdoch'],REFUTES,True,NOT_ENOUGH_INFO,rupert murdoch is an entrepreneur.,True,True,False,False,True
+James Brolin appeared in several 1990s sitcoms.,NOT_ENOUGH_INFO,['james brolin'],SUPPORTS,False,NOT_ENOUGH_INFO,james brolin is a character actor.,True,False,True,True,False
+The World Trade Center was destroyed as the result of a series of TV shows.,NOT_ENOUGH_INFO,['the world trade center'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Caroline Kennedy is a lawyer.,NOT_ENOUGH_INFO,['caroline kennedy'],SUPPORTS,False,SUPPORTS,Caroline Kennedy is a lawyer.,True,False,False,True,True
+Connie Nielsen is a film actress.,SUPPORTS,['connie nielsen'],SUPPORTS,True,REFUTES,Connie Nielsen was directed by Connie Nielsen.,True,True,False,False,True
+The New York Knicks dissolved the National Basketball Association (NBA).,NOT_ENOUGH_INFO,"['nba', 'the new york knicks']",REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Amancio Ortega is a business tycoon.,SUPPORTS,['amancio ortega'],SUPPORTS,True,SUPPORTS,Amancio Ortega is a business tycoon.,True,True,True,False,False
+Manchester United has had two coaches.,NOT_ENOUGH_INFO,['manchester'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,,False,True,True,False,False
+The Mormon population has been growing rapidly due to high birth and conversion rates.,SUPPORTS,['mormon'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Scandinavia does not include the remote Norwegian people of Svalbard and Jan Mayen.,NOT_ENOUGH_INFO,"['jan mayen', 'svalbard']",REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Larry Wilmore is only a director.,NOT_ENOUGH_INFO,['larry wilmore'],REFUTES,False,NOT_ENOUGH_INFO,Larry Wilmore is a director.,True,False,True,True,False
+WGBH-TV is an American television station.,SUPPORTS,['wgbh-tv'],SUPPORTS,True,REFUTES,wgbh-tv is from united states.,True,True,False,False,True
+Sancho Panza is a character who appears exclusively in Harry Potter and the Chamber of Secrets.,REFUTES,['harry potter'],REFUTES,True,NOT_ENOUGH_INFO,Sancho Panza has held the position of exclusively.,True,True,False,False,True
+The ABC islands are part of the Arctic Ocean.,REFUTES,['abc'],REFUTES,True,SUPPORTS,ABC islands is part of Arctic Ocean.,True,True,False,False,True
+Kendall Jenner is a driver.,REFUTES,['kendall jenner'],NOT_ENOUGH_INFO,False,SUPPORTS,Kendall Jenner is a driver.,True,False,False,True,True
+Jack Dylan Grazer is a child of two people.,SUPPORTS,['jack dylan grazer'],SUPPORTS,True,REFUTES,Jack Dylan Grazer has held the position of child.,True,True,False,False,True
+"Janelle Monáe's full name is Janelle Monáe Robinson, given to her by her parents.",NOT_ENOUGH_INFO,['janelle monáe'],SUPPORTS,False,NOT_ENOUGH_INFO,janelle monáe is a singer.,True,False,True,True,False
+Miranda Otto has yet to begin her acting career.,REFUTES,['miranda otto'],REFUTES,True,REFUTES,miranda otto is an actor.,True,True,True,False,False
+Henry II of France has three sisters.,NOT_ENOUGH_INFO,['henry ii'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,henry ii is a monarch.,True,True,True,False,False
+Jed Whedon is a citizen.,SUPPORTS,['jed whedon'],NOT_ENOUGH_INFO,False,SUPPORTS,Jed Whedon is a citizen.,True,False,True,True,False
+Tinker Tailor Soldier Spy only stars Adam Sandler.,REFUTES,['adam sandler'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Diwali is a award ceremony.,NOT_ENOUGH_INFO,['diwali'],REFUTES,False,NOT_ENOUGH_INFO,diwali is from india.,True,False,True,True,False
+Henry II of France died in a tournament held to celebrate the autumn.,REFUTES,['henry ii'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Jamie Murray is a Davis Cup maker.,NOT_ENOUGH_INFO,['jamie murray'],REFUTES,False,NOT_ENOUGH_INFO,jamie murray is a tennis player.,True,False,True,True,False
+Trevor Griffiths is only a novelist.,REFUTES,['trevor griffiths'],REFUTES,True,NOT_ENOUGH_INFO,Trevor Griffiths is a novelist.,True,True,False,False,True
+Nina Jacobson was president of a General Motors subsidiary.,NOT_ENOUGH_INFO,['nina jacobson'],REFUTES,False,NOT_ENOUGH_INFO,Nina Jacobson is a president.,True,False,True,True,False
+Earl Scruggs was a musician who played banjo.,SUPPORTS,['earl scruggs'],SUPPORTS,True,NOT_ENOUGH_INFO,Earl Scruggs is a musician.,True,True,False,False,True
+AMGTV does not have drama television programming.,REFUTES,['amgtv'],REFUTES,True,NOT_ENOUGH_INFO,amgtv is from united states.,True,True,False,False,True
+Margaret Thatcher was a person.,SUPPORTS,['margaret thatcher'],SUPPORTS,True,SUPPORTS,Margaret Thatcher is a person.,True,True,True,False,False
+Multiple shows on Cartoon Network employed John DiMaggio.,SUPPORTS,['john dimaggio'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Bret Easton Ellis wrote the screenplay for a 2013 film and he was criticized for this.,NOT_ENOUGH_INFO,['bret easton ellis'],SUPPORTS,False,NOT_ENOUGH_INFO,bret easton ellis is a screenwriter.,True,False,True,True,False
+Kyle Maclachlan has been nominated for an Emmy award because of a television series called Twin Peaks.,SUPPORTS,['kyle maclachlan'],SUPPORTS,True,NOT_ENOUGH_INFO,kyle maclachlan has received the saturn award for best actor on television award.,True,True,False,False,True
+Recovery is Eminem's first album.,REFUTES,['eminem'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Ted Cruz has served as the senior Unites States Senator from Texas since 2014.,REFUTES,['ted cruz'],SUPPORTS,False,NOT_ENOUGH_INFO,Ted Cruz has held the position of senator.,True,False,False,True,True
+Liverpool is controlled by Lancashire.,NOT_ENOUGH_INFO,['liverpool'],REFUTES,False,SUPPORTS,Liverpool owned by Lancashire,True,False,False,True,True
+The Vandals migrated around Europe.,SUPPORTS,['vandals'],SUPPORTS,True,NOT_ENOUGH_INFO,vandals is from vandal kingdom.,True,True,False,False,True
+Weekly Idol is hosted by Michio Kaku.,REFUTES,['idol'],REFUTES,True,NOT_ENOUGH_INFO,idol is from japan.,True,True,False,False,True
+Luis Fonsi was born in Hawaii.,REFUTES,['luis fonsi'],REFUTES,True,SUPPORTS,Luis Fonsi was born in Hawaii.,True,True,False,False,True
+Dave Gibbons is an Indian writer.,REFUTES,['dave gibbons'],REFUTES,True,NOT_ENOUGH_INFO,Dave Gibbons is a writer.,True,True,False,False,True
+John Dolmayan is a bear.,REFUTES,['john dolmayan'],REFUTES,True,SUPPORTS,John Dolmayan is a bear.,True,True,False,False,True
+Bethany Hamilton engaged in water sports.,SUPPORTS,['bethany hamilton'],SUPPORTS,True,SUPPORTS,bethany hamilton is a surfer.,True,True,True,False,False
+ASAP Rocky is only a music video actor.,REFUTES,['asap rocky'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+"Bank of America has 4,600 retail financial employees.",NOT_ENOUGH_INFO,['bank of america'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,bank of america operates in the financial services.,True,True,True,False,False
+Taarak Mehta Ka Ooltah Chashmah is not produced by Neela Tele Films Private Limited.,REFUTES,['taarak mehta'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Luis Fonsi uses a pseudonym.,SUPPORTS,['luis fonsi'],REFUTES,False,SUPPORTS,luis fonsi is an actor.,True,False,True,True,False
+Alexandra Daddario identifies as an American.,NOT_ENOUGH_INFO,['alexandra daddario'],SUPPORTS,False,SUPPORTS,alexandra daddario is a citizen of united states.,True,False,False,True,True
+Danger UXB has an all-female cast.,REFUTES,['uxb'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Spider-Man 2 was written by Alvin Sargent in 2003.,REFUTES,['alvin'],SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+Robert Palmer (writer) is involved in media.,SUPPORTS,['robert palmer'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Anushka Sharma is not an actress.,REFUTES,['anushka sharma'],REFUTES,True,REFUTES,Anushka Sharma is an actress.,True,True,True,False,False
+"Stephen Hillenburg was fascinated with the ocean as a child, leading him to create Spongebob Squarepants.",SUPPORTS,"['spongebob squarepants', 'stephen hillenburg']",SUPPORTS,True,NOT_ENOUGH_INFO,stephen hillenburg is an animator.,True,True,False,False,True
+Mick Thomson was born in Iowa.,SUPPORTS,['mick thomson'],SUPPORTS,True,SUPPORTS,Mick Thomson was born in Iowa.,True,True,True,False,False
+Nina Jacobson's birthday is in 1965.,NOT_ENOUGH_INFO,['nina jacobson'],NOT_ENOUGH_INFO,True,SUPPORTS,nina jacobson was born on 1965-11-30.,True,True,False,False,True
+Tijuana is on the Baja California Peninsula.,SUPPORTS,['tijuana'],SUPPORTS,True,NOT_ENOUGH_INFO,tijuana is from mexico.,True,True,False,False,True
+The White House Press Secretary is a Kremlin official.,REFUTES,['the white house'],REFUTES,True,NOT_ENOUGH_INFO,Press Secretary has held the position of kremlin official.,True,True,False,False,True
+Eva Mendes has only ever been a singer.,REFUTES,['eva mendes'],REFUTES,True,NOT_ENOUGH_INFO,Eva Mendes is a singer.,True,True,False,False,True
+Mary-Kate Olsen and Ashley Olsen are designers.,SUPPORTS,"['mary-kate olsen', 'ashley olsen']",SUPPORTS,True,NOT_ENOUGH_INFO,Ashley Olsen is a designers.,True,True,False,False,True
+Michaela Watkins is British.,NOT_ENOUGH_INFO,['michaela watkins'],REFUTES,False,SUPPORTS,Michaela Watkins is a citizen of United Kingdom.,True,False,False,True,True
+Simon Cowell was not a part of a reality show.,REFUTES,['simon cowell'],REFUTES,True,REFUTES,Simon Cowell is part of reality show.,True,True,True,False,False
+Manmohan Singh was the first Sikh in North Carolina.,NOT_ENOUGH_INFO,['manmohan singh'],REFUTES,False,NOT_ENOUGH_INFO,Manmohan Singh is a sikh.,True,False,True,True,False
+Rick Yune was on a series that cancelled.,SUPPORTS,['rick yune'],NOT_ENOUGH_INFO,False,NOT_ENOUGH_INFO,rick yune is a television actor.,True,False,False,True,True
+"Mel B partied with Missy ""Misdemeanor"" Elliott.",NOT_ENOUGH_INFO,"['mel', 'mel b']",NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,,False,True,True,False,False
+The University of Illinois at Chicago is state-funded.,SUPPORTS,['the university of illinois at'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Roswell was by Jason Katims.,SUPPORTS,"['roswell', 'jason katims']",REFUTES,False,REFUTES,roswell was founded on 1869-01-01.,True,False,False,True,True
+Mandy Moore is a musician.,SUPPORTS,['mandy moore'],SUPPORTS,True,SUPPORTS,Mandy Moore is a musician.,True,True,True,False,False
+"On August 19, 1945, Ian Gillan was born.",SUPPORTS,['ian gillan'],REFUTES,False,SUPPORTS,"Ian Gillan was born on August 19, 1945.",True,False,True,True,False
+"Lyon had a population of over 500,000 in 2014.",SUPPORTS,['lyon'],SUPPORTS,True,NOT_ENOUGH_INFO,lyon is from france.,True,True,False,False,True
+The Bengal tiger is from a region.,SUPPORTS,['bengal'],NOT_ENOUGH_INFO,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+Woodrow Wilson worked in Canada.,NOT_ENOUGH_INFO,['woodrow wilson'],NOT_ENOUGH_INFO,True,REFUTES,woodrow wilson is a politician.,True,True,False,False,True
+"Scotty Moore was born on May 27, 1931.",REFUTES,['scotty moore'],SUPPORTS,False,SUPPORTS,"Scotty Moore was born on May 27, 1931.",True,False,False,True,True
+Zoe Saldana is a citizen of somewhere.,NOT_ENOUGH_INFO,['zoe saldana'],NOT_ENOUGH_INFO,True,SUPPORTS,Zoe Saldana has held the position of citizen.,True,True,False,False,True
+Samsung entered the drilling industry in the 1970's.,NOT_ENOUGH_INFO,['samsung'],REFUTES,False,REFUTES,samsung operates in the electronics industry.,True,False,False,True,True
+Terry Crews played on the boat.,NOT_ENOUGH_INFO,['terry crews'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,terry crews is an actor.,True,True,True,False,False
+Sonny & Cher began in the mid-1960's.,NOT_ENOUGH_INFO,['cher'],SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Don Bradman was a Test coach.,NOT_ENOUGH_INFO,['don bradman'],REFUTES,False,NOT_ENOUGH_INFO,Don Bradman is a coach.,True,False,True,True,False
+James VI and I was Spanish.,REFUTES,['james vi'],REFUTES,True,NOT_ENOUGH_INFO,James VI is a citizen of Spain.,True,True,False,False,True
+Colin Kaepernick is quarterback for the 49ers.,SUPPORTS,['colin kaepernick'],REFUTES,False,NOT_ENOUGH_INFO,Colin Kaepernick has held the position of quarterback.,True,False,False,True,True
+Stephen Hillenburg directed The SpongeBob SquarePants Movie.,SUPPORTS,"['spongebob squarepants', 'stephen hillenburg']",SUPPORTS,True,SUPPORTS,SpongeBob SquarePants Movie was directed by Stephen Hillenburg.,True,True,True,False,False
+Jenny McCarthy started her career in 1993.,SUPPORTS,['jenny mccarthy'],SUPPORTS,True,REFUTES,jenny mccarthy was born on 1972-11-01.,True,True,False,False,True
+Henry II of France died from a stab wound in a jousting tournament.,NOT_ENOUGH_INFO,['henry ii'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Charles de Gaulle was a leader in the French Resistance.,SUPPORTS,['charles de gaulle'],SUPPORTS,True,NOT_ENOUGH_INFO,Charles de Gaulle is a citizen of France.,True,True,False,False,True
+Goldie Hawn received a Grammy nomination.,SUPPORTS,['grammy'],SUPPORTS,True,SUPPORTS,Goldie Hawn P166 Grammy nomination,True,True,True,False,False
+Alexandra Daddario is from Indiana.,NOT_ENOUGH_INFO,['alexandra daddario'],REFUTES,False,SUPPORTS,Alexandra Daddario is a citizen of Indiana.,True,False,False,True,True
+Nuuk is the seat of government of Germany.,REFUTES,['nuuk'],REFUTES,True,NOT_ENOUGH_INFO,nuuk is from greenland.,True,True,False,False,True
+International students come to the University of Mississippi for 4 years.,NOT_ENOUGH_INFO,['the university of mississippi'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,,False,True,True,False,False
+Harold Macmillan served as the Prime Minister of the United Kingdom.,SUPPORTS,['harold macmillan'],SUPPORTS,True,NOT_ENOUGH_INFO,Harold Macmillan has held the position of prime minister.,True,True,False,False,True
+The Catcher in the Rye is a young adult novel.,NOT_ENOUGH_INFO,['rye'],SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Stanley Williams graduated from college in 2005.,REFUTES,['stanley williams'],NOT_ENOUGH_INFO,False,REFUTES,stanley williams was born on 1951-01-01.,True,False,True,True,False
+The Eighth Doctor has only ever aired on FX.,REFUTES,['fx'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+The United Nations Charter is the foundational declaration of war of the United Nations.,NOT_ENOUGH_INFO,['the united nations'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+"Chris Kyle did not die on February 2, 2013.",REFUTES,['chris kyle'],REFUTES,True,REFUTES,"Chris Kyle died on February 2, 2013.",True,True,True,False,False
+"Mary-Kate Olsen's and Ashley Olsen's dog was born on June 13th, 1986.",NOT_ENOUGH_INFO,"['mary-kate olsen', 'ashley olsen']",NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,"Ashley Olsen was born on June 13th, 1986.",True,True,True,False,False
+Shannon Lee is a German.,NOT_ENOUGH_INFO,['shannon lee'],REFUTES,False,SUPPORTS,Shannon Lee is a citizen of Germany.,True,False,False,True,True
+Mud has Tom Cruise in its cast.,NOT_ENOUGH_INFO,['tom cruise'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Henry III of France died without a successor.,REFUTES,['henry iii'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Ann Richards was the 45th Governor of Texas.,SUPPORTS,['ann richards'],REFUTES,False,NOT_ENOUGH_INFO,Ann Richards is a governor.,True,False,False,True,True
+Gaius Julius Caesar was born in 130 BC in Rome.,NOT_ENOUGH_INFO,"['julius caesar', 'gaius julius caesar', 'bc']",REFUTES,False,NOT_ENOUGH_INFO,Gaius Julius Caesar was born in Rome.,True,False,True,True,False
+Michael Hutchence died in Boston.,REFUTES,['michael hutchence'],REFUTES,True,SUPPORTS,Michael Hutchence place of death Boston,True,True,False,False,True
+Bongwater was based on a Pulitzer Prize-winning book.,NOT_ENOUGH_INFO,['bongwater'],REFUTES,False,NOT_ENOUGH_INFO,bongwater was founded on 1985-01-01.,True,False,True,True,False
+"Tom DeLonge formed a band in San Bernardino, California.",NOT_ENOUGH_INFO,['tom delonge'],SUPPORTS,False,NOT_ENOUGH_INFO,tom delonge is a singer-songwriter.,True,False,True,True,False
+The World Trade Center featured landmark twin boys.,NOT_ENOUGH_INFO,['the world trade center'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Yara Shahidi is 32 years old.,REFUTES,['yara shahidi'],NOT_ENOUGH_INFO,False,REFUTES,yara shahidi was born on 2000-02-10.,True,False,True,True,False
+Jed Whedon is the son of someone born in June.,REFUTES,['jed whedon'],NOT_ENOUGH_INFO,False,NOT_ENOUGH_INFO,Jed Whedon has held the position of son.,True,False,False,True,True
+ASAP Rocky has directed videos for his own music.,SUPPORTS,['asap rocky'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Issa Rae stars in The Galactic Empire.,NOT_ENOUGH_INFO,['issa rae'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+"Ted Cruz was born on December 22nd, 1970 in a log cabin.",NOT_ENOUGH_INFO,['ted cruz'],REFUTES,False,NOT_ENOUGH_INFO,"Ted Cruz was born on December 22nd, 1970.",True,False,True,True,False
+Georges Gilles de la Tourette failed to describe symptoms in nine patients.,REFUTES,['georges gilles de la tourette'],REFUTES,True,REFUTES,georges gilles de la tourette is a neurologist.,True,True,True,False,False
+Elizabeth I was the son of Anne Boleyn.,REFUTES,['anne boleyn'],REFUTES,True,REFUTES,I has held the position of son.,True,True,True,False,False
+Trevor Griffiths is English and Scottish.,NOT_ENOUGH_INFO,['trevor griffiths'],SUPPORTS,False,NOT_ENOUGH_INFO,Trevor Griffiths is a citizen of United Kingdom.,True,False,True,True,False
+Ian Gillan is a horse.,NOT_ENOUGH_INFO,['ian gillan'],REFUTES,False,SUPPORTS,Ian Gillan is a horse.,True,False,False,True,True
+Island Records was founded in Boston only.,NOT_ENOUGH_INFO,['island records'],REFUTES,False,NOT_ENOUGH_INFO,island records was founded by chris blackwell.,True,False,True,True,False
+Logie Awards had over 2017 attendees.,NOT_ENOUGH_INFO,['logie awards'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,logie awards was founded on 1960-01-01.,True,True,True,False,False
+John Perry Barlow is still a member of the Grateful Dead.,REFUTES,['the grateful dead'],REFUTES,True,SUPPORTS,John Perry Barlow is a member of Grateful Dead.,True,True,False,False,True
+Blade Runner 2049 is a prequel.,REFUTES,['blade runner'],REFUTES,True,SUPPORTS,Blade Runner 2049 is a prequel.,True,True,False,False,True
+Damon Albarn's debut album was co-recorded by Richard Russell.,NOT_ENOUGH_INFO,['damon albarn'],REFUTES,False,NOT_ENOUGH_INFO,damon albarn is a songwriter.,True,False,True,True,False
+Mickey Rourke appeared in a movie.,SUPPORTS,['mickey rourke'],SUPPORTS,True,NOT_ENOUGH_INFO,mickey rourke is a character actor.,True,True,False,False,True
+"Alice Cooper is a dancer, author, and mime.",NOT_ENOUGH_INFO,['alice cooper'],REFUTES,False,NOT_ENOUGH_INFO,Alice Cooper is a dancer.,True,False,True,True,False
+Mickey Rourke appeared in Iron Man 2.,SUPPORTS,['mickey rourke'],REFUTES,False,SUPPORTS,Mickey Rourke is a member of Iron Man 2.,True,False,True,True,False
+Northwestern University is a private university in Michigan.,REFUTES,['northwestern university'],REFUTES,True,NOT_ENOUGH_INFO,northwestern university is from united states.,True,True,False,False,True
+San Diego Comic-Con was founded in San Diego in 1970.,SUPPORTS,['san diego comic-con'],SUPPORTS,True,REFUTES,san diego comic-con was founded on 1969-01-01.,True,True,False,False,True
+Mickey Rourke appeared in a film written by Sylvester Stallone.,SUPPORTS,['mickey rourke'],SUPPORTS,True,REFUTES,mickey rourke is a film producer.,True,True,False,False,True
+Nawaz Sharif is the 20th President of Pakistan.,NOT_ENOUGH_INFO,['nawaz sharif'],REFUTES,False,NOT_ENOUGH_INFO,Nawaz Sharif is a president.,True,False,True,True,False
+Brad Wilk started his career as a clown.,NOT_ENOUGH_INFO,['brad wilk'],REFUTES,False,NOT_ENOUGH_INFO,brad wilk was born on 1968-09-05.,True,False,True,True,False
+The Originals (TV series) began airing on The CW in October of 2005.,REFUTES,['cw'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Samwell Tarly makes zero appearances in Game of Thrones.,REFUTES,['thrones'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Johnny Galecki acted in an ABC sitcom for five years.,SUPPORTS,"['johnny galecki', 'abc']",SUPPORTS,True,NOT_ENOUGH_INFO,johnny galecki is an actor.,True,True,False,False,True
+Jamie Lee Curtis' father is unknown.,NOT_ENOUGH_INFO,['jamie lee curtis'],REFUTES,False,NOT_ENOUGH_INFO,Jamie Lee Curtis' is an unknown.,True,False,True,True,False
+Carlos Santana was born in the 20th century.,SUPPORTS,['carlos santana'],SUPPORTS,True,SUPPORTS,Carlos Santana was born on 20th century.,True,True,True,False,False
+Murda Beatz's dog's name is Shane Lindstrom.,NOT_ENOUGH_INFO,['murda beatz'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,dog has held the position of shane lindstrom.,True,True,True,False,False
+Jenny McCarthy began her career in 1995.,REFUTES,['jenny mccarthy'],SUPPORTS,False,REFUTES,jenny mccarthy was born on 1972-11-01.,True,False,True,True,False
+L.A. Reid has served as the CEO of an American record label owned by Universal Music Group.,NOT_ENOUGH_INFO,['l.a. reid'],SUPPORTS,False,NOT_ENOUGH_INFO,L.A. Reid has held the position of chief executive officer.,True,False,True,True,False
+Alexandra Daddario was born in the seventies.,REFUTES,['alexandra daddario'],REFUTES,True,SUPPORTS,Alexandra Daddario was born on seventies.,True,True,False,False,True
+John Dolmayan is a singer.,NOT_ENOUGH_INFO,['john dolmayan'],REFUTES,False,SUPPORTS,John Dolmayan is a singer.,True,False,False,True,True
+Jason Katims has made no contributions to Roswell.,REFUTES,"['roswell', 'jason katims']",REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Gotham City Sirens was exclusively created in in Argentina.,NOT_ENOUGH_INFO,['gotham city sirens'],REFUTES,False,REFUTES,gotham city sirens is from of origin united states.,True,False,False,True,True
+Lost was not on ABC.,REFUTES,['abc'],REFUTES,True,REFUTES,Lost is a member of ABC.,True,True,True,False,False
+Margaret Thatcher implemented laws that have come to be known as Thatcherism.,NOT_ENOUGH_INFO,['margaret thatcher'],SUPPORTS,False,NOT_ENOUGH_INFO,margaret thatcher is a politician.,True,False,True,True,False
+Joe Rogan moved to Los Angeles in 1994.,SUPPORTS,['joe rogan'],SUPPORTS,True,NOT_ENOUGH_INFO,joe rogan was born in newark.,True,True,False,False,True
+Diwali originated in France.,NOT_ENOUGH_INFO,['diwali'],REFUTES,False,REFUTES,diwali is from india.,True,False,False,True,True
+Don Hall is a film critic.,NOT_ENOUGH_INFO,['don hall'],NOT_ENOUGH_INFO,True,SUPPORTS,Don Hall is a film critic.,True,True,False,False,True
+"Otto I, Holy Roman Emperor engaged in war.",SUPPORTS,['otto i'],SUPPORTS,True,REFUTES,otto i is an aristocrat.,True,True,False,False,True
+Weekly Idol is hosted by a rapper.,SUPPORTS,['idol'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+Barry Van Dyke is an American actor from California.,NOT_ENOUGH_INFO,['barry van dyke'],SUPPORTS,False,NOT_ENOUGH_INFO,Barry Van Dyke is an actor.,True,False,True,True,False
+Joni Mitchell stopped going on tour.,SUPPORTS,['joni mitchell'],SUPPORTS,True,NOT_ENOUGH_INFO,joni mitchell is a musician.,True,True,False,False,True
+Margaret Thatcher was the first woman to lead a major political party in the United Kingdom.,SUPPORTS,['margaret thatcher'],REFUTES,False,NOT_ENOUGH_INFO,Margaret Thatcher has held the position of party.,True,False,False,True,True
+Fred Seibert has produced live action commercials.,NOT_ENOUGH_INFO,['fred seibert'],SUPPORTS,False,NOT_ENOUGH_INFO,fred seibert is a television producer.,True,False,True,True,False
+John DiMaggio refused to work on any shows from Cartoon Network.,REFUTES,['john dimaggio'],REFUTES,True,REFUTES,john dimaggio is a television actor.,True,True,True,False,False
+Bob Ross was Italian.,NOT_ENOUGH_INFO,['bob ross'],REFUTES,False,SUPPORTS,Bob Ross is a citizen of Italy.,True,False,False,True,True
+Dave Gibbons has no middle name.,REFUTES,['dave gibbons'],REFUTES,True,NOT_ENOUGH_INFO,dave gibbons was born on 1949-04-14.,True,True,False,False,True
+Stephen Hillenburg was fascinated with the ocean as a child.,SUPPORTS,['stephen hillenburg'],SUPPORTS,True,NOT_ENOUGH_INFO,stephen hillenburg is a writer.,True,True,False,False,True
+Private lives is a comedy of drugs by Noel Coward.,REFUTES,['noel coward'],REFUTES,True,NOT_ENOUGH_INFO,lives has held the position of comedy.,True,True,False,False,True
+Murda Beatz is only a jazz record producer.,REFUTES,['murda beatz'],REFUTES,True,NOT_ENOUGH_INFO,Murda Beatz is a record producer.,True,True,False,False,True
+Sennacherib's youngest son was Ismael.,REFUTES,['sennacherib'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Omar Khadr was sentenced to two years in prison.,NOT_ENOUGH_INFO,['omar khadr'],REFUTES,False,NOT_ENOUGH_INFO,omar khadr was born on 1986-09-19.,True,False,True,True,False
+A&E was previously the Arts & Entertainment Network.,SUPPORTS,['a&e'],SUPPORTS,True,NOT_ENOUGH_INFO,a&e is headquartered in new york city.,True,True,False,False,True
+Celebrity Rehab with Dr. Drew was a scripted TV drama.,REFUTES,['celebrity rehab'],REFUTES,True,REFUTES,celebrity rehab is associated with the genre reality television.,True,True,True,False,False
+Oscar de la Hoya was named Fighter of the Year.,SUPPORTS,['oscar de la hoya'],SUPPORTS,True,NOT_ENOUGH_INFO,oscar de la hoya is a boxer.,True,True,False,False,True
+Tatum O'Neal got married.,SUPPORTS,"[""tatum o'neal""]",NOT_ENOUGH_INFO,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+Tilda Swinton is not an artist.,REFUTES,['tilda swinton'],REFUTES,True,REFUTES,Tilda Swinton is an artist.,True,True,True,False,False
+Amancio Ortega is a plumber.,REFUTES,['amancio ortega'],REFUTES,True,SUPPORTS,Amancio Ortega is a plumber.,True,True,False,False,True
+Joe Rogan did not move to Los Angeles in 1994.,REFUTES,['joe rogan'],REFUTES,True,NOT_ENOUGH_INFO,joe rogan was born on 1967-08-11.,True,True,False,False,True
+Youtube has been ranked by President Trump.,NOT_ENOUGH_INFO,['youtube'],REFUTES,False,NOT_ENOUGH_INFO,youtube is from united states.,True,False,True,True,False
+James VI and I was a major adversary of a single parliament for England.,REFUTES,['james vi'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Tata Motors is listed on the first (BSE) Bombay Stock Exchange.,NOT_ENOUGH_INFO,['tata motors'],SUPPORTS,False,NOT_ENOUGH_INFO,Tata Motors is a member of BSE.,True,False,True,True,False
+Trevor Griffiths is a writer.,SUPPORTS,['trevor griffiths'],SUPPORTS,True,SUPPORTS,Trevor Griffiths is a writer.,True,True,True,False,False
+Ernest Medina was court martialed in 1982.,REFUTES,['ernest medina'],REFUTES,True,NOT_ENOUGH_INFO,Ernest Medina has held the position of court martialed.,True,True,False,False,True
+Fidel Castro transferred his responsibilities to his sister.,NOT_ENOUGH_INFO,['fidel castro'],REFUTES,False,REFUTES,fidel castro is a politician.,True,False,False,True,True
+Robert Palmer (writer) is a father.,NOT_ENOUGH_INFO,['robert palmer'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,,False,True,True,False,False
+"Murda Beatz is from Fort Erie, Montreal.",REFUTES,['murda beatz'],REFUTES,True,NOT_ENOUGH_INFO,Murda Beatz is a citizen of Fort Erie.,True,True,False,False,True
+Osamu Tezuka was a child.,SUPPORTS,['osamu tezuka'],NOT_ENOUGH_INFO,False,SUPPORTS,Tezuka is a child.,True,False,True,True,False
+Larry Wilmore is the writer of Les Miserables.,NOT_ENOUGH_INFO,['larry wilmore'],REFUTES,False,NOT_ENOUGH_INFO,Larry Wilmore is a writer.,True,False,True,True,False
+Brad Wilk died before being a member of Greta in 1990.,REFUTES,['brad wilk'],REFUTES,True,NOT_ENOUGH_INFO,Brad Wilk died on 1990.,True,True,False,False,True
+Google Search can be used by spring 2018.,NOT_ENOUGH_INFO,['google search'],SUPPORTS,False,NOT_ENOUGH_INFO,google search was founded on 1997-09-15.,True,False,True,True,False
+"Diana, Princess of Wales did not die in a car crash in Paris on August 31st, 1997.",REFUTES,['wales'],REFUTES,True,REFUTES,"Diana died on August 31st, 1997.",True,True,True,False,False
+Taarak Mehta Ka Ooltah Chashmah is not a sitcom.,REFUTES,['taarak mehta'],REFUTES,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Harris Jayaraj is from India.,SUPPORTS,['harris jayaraj'],SUPPORTS,True,SUPPORTS,Harris Jayaraj is a citizen of India.,True,True,True,False,False
+Sean Gunn was in Guardians of the Galaxy in 2015.,REFUTES,['sean gunn'],SUPPORTS,False,NOT_ENOUGH_INFO,sean gunn is an actor.,True,False,False,True,True
+Manchester by the Sea is a film that was premiered at the Sundance Film Festival.,SUPPORTS,['manchester'],SUPPORTS,True,NOT_ENOUGH_INFO,Manchester has held the position of premiered.,True,True,False,False,True
+Noel Fisher was on HBO.,NOT_ENOUGH_INFO,"['hbo', 'noel fisher']",SUPPORTS,False,SUPPORTS,Noel Fisher is a member of HBO.,True,False,False,True,True
+Hezbollah received zero support from Iran.,REFUTES,['hezbollah'],REFUTES,True,NOT_ENOUGH_INFO,Hezbollah P166 zero support,True,True,False,False,True
+American Idol (season 8) had Randy Jackson as a director.,NOT_ENOUGH_INFO,['idol'],REFUTES,False,NOT_ENOUGH_INFO,American Idol was directed by Randy Jackson.,True,False,True,True,False
+Tijuana is on an island.,REFUTES,['tijuana'],REFUTES,True,NOT_ENOUGH_INFO,tijuana is from mexico.,True,True,False,False,True
+Bethany Hamilton wrote a to do list.,NOT_ENOUGH_INFO,['bethany hamilton'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,bethany hamilton is a writer.,True,True,True,False,False
+Derek Hough has worked.,SUPPORTS,['derek hough'],SUPPORTS,True,SUPPORTS,derek hough is an actor.,True,True,True,False,False
+Death Note is a Japanese television science fiction series based on the manga series of the same name.,NOT_ENOUGH_INFO,['death note'],SUPPORTS,False,NOT_ENOUGH_INFO,Death Note is a citizen of Japan.,True,False,True,True,False
+William Cohen is from Oregon.,REFUTES,['william cohen'],REFUTES,True,SUPPORTS,William Cohen is a citizen of Oregon.,True,True,False,False,True
+James Jones won the Three-Point Contest.,SUPPORTS,['james jones'],NOT_ENOUGH_INFO,False,NOT_ENOUGH_INFO,James Jones P166 Three-Point Contest,True,False,False,True,True
+Martin Van Buren was appointed.,SUPPORTS,['martin van buren'],NOT_ENOUGH_INFO,False,REFUTES,martin van buren has held the position of president-elect of the united states.,True,False,False,True,True
+Ernest Medina participated in a documented mass killing.,SUPPORTS,['ernest medina'],SUPPORTS,True,NOT_ENOUGH_INFO,ernest medina died on 2018-05-08.,True,True,False,False,True
+Anne Boleyn is not an influential person.,REFUTES,['anne boleyn'],REFUTES,True,REFUTES,Anne Boleyn is an influential person.,True,True,True,False,False
+I Kissed a Girl is part of Katy Perry's second studio jazz album.,NOT_ENOUGH_INFO,['katy perry'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Kendall Jenner is online.,NOT_ENOUGH_INFO,['kendall jenner'],NOT_ENOUGH_INFO,True,SUPPORTS,Kendall Jenner is an online.,True,True,False,False,True
+Fred Armisen is a screenwriter for television series.,NOT_ENOUGH_INFO,['fred armisen'],SUPPORTS,False,NOT_ENOUGH_INFO,Fred Armisen is a screenwriter.,True,False,True,True,False
+Island Records was co-founded by Chris Blackwell.,SUPPORTS,['island records'],SUPPORTS,True,SUPPORTS,island records was founded by chris blackwell.,True,True,True,False,False
+James Earl Jones was a voice actor in a movie.,SUPPORTS,['james earl jones'],SUPPORTS,True,NOT_ENOUGH_INFO,James Earl Jones is a voice actor.,True,True,False,False,True
+David Spade starred in a minefield.,NOT_ENOUGH_INFO,['david spade'],REFUTES,False,SUPPORTS,minefield has David Spade as a cast member.,True,False,False,True,True
+"Chris Kyle died on March 2, 2013.",REFUTES,['chris kyle'],SUPPORTS,False,SUPPORTS,"Chris Kyle died on March 2, 2013.",True,False,False,True,True
+"""Champ"" is a nickname held by James Jones.",SUPPORTS,['james jones'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+Taylor Lautner appeared on television sitcoms when he was a teenager.,SUPPORTS,['taylor lautner'],SUPPORTS,True,NOT_ENOUGH_INFO,taylor lautner is a television actor.,True,True,False,False,True
+Sands Hotel and Casino closed in 1952.,REFUTES,['sands hotel'],REFUTES,True,REFUTES,sands hotel was founded on 1952-01-01.,True,True,True,False,False
+Bessie Smith was a heavy metal singer.,REFUTES,['bessie smith'],REFUTES,True,NOT_ENOUGH_INFO,Bessie Smith is a singer.,True,True,False,False,True
+I Kissed a Girl is part of Katy Perry's second studio EP.,NOT_ENOUGH_INFO,['katy perry'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+WGBH-TV is a radio station.,NOT_ENOUGH_INFO,['wgbh-tv'],REFUTES,False,NOT_ENOUGH_INFO,wgbh-tv is from united states.,True,False,True,True,False
+Brian Michael Bendis has worked in Panama.,NOT_ENOUGH_INFO,['brian michael bendis'],NOT_ENOUGH_INFO,True,REFUTES,brian michael bendis is a citizen of united states.,True,True,False,False,True
+Trace Cyrus is the cousin of Noah Cyrus.,REFUTES,['noah cyrus'],REFUTES,True,NOT_ENOUGH_INFO,Trace Cyrus has held the position of cousin.,True,True,False,False,True
+The Vandals were first heard of in Krakow.,NOT_ENOUGH_INFO,['vandals'],REFUTES,False,NOT_ENOUGH_INFO,vandals is from poland.,True,False,True,True,False
+XHamster's The Sex Factor forces eight men and eight women to battle to become a porn star.,NOT_ENOUGH_INFO,['xhamster'],SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Shannon Lee is not American.,REFUTES,['shannon lee'],REFUTES,True,REFUTES,Shannon Lee is a citizen of United States.,True,True,True,False,False
+Times Higher Education World University Rankings is a publication of illustrations.,REFUTES,"['times', 'times higher education world university rankings']",REFUTES,True,REFUTES,times higher education world university rankings was founded on 2010-01-01.,True,True,True,False,False
+"The Originals (TV series) began airing on The CW on October 30, 2013.",REFUTES,['cw'],SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+Battle of the Bastards is a Game of Thrones episode.,SUPPORTS,['thrones'],SUPPORTS,True,NOT_ENOUGH_INFO,Battle has held the position of game.,True,True,False,False,True
+Janelle Monáe has only ever been a plumber.,REFUTES,['janelle monáe'],REFUTES,True,NOT_ENOUGH_INFO,Janelle Monáe is a plumber.,True,True,False,False,True
+Carlos Santana was the most popular singer in the nineties.,NOT_ENOUGH_INFO,['carlos santana'],REFUTES,False,NOT_ENOUGH_INFO,Carlos Santana is a singer.,True,False,True,True,False
+Mandy Moore had a career in country music for 11 years.,NOT_ENOUGH_INFO,['mandy moore'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,mandy moore genre is from music.,True,True,True,False,False
+The maximum elevation in the Hindu Kush is at Tirichmir.,NOT_ENOUGH_INFO,['kush'],SUPPORTS,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Kim Jong-il works for the Eternal Chairman of the National Defence Commission.,NOT_ENOUGH_INFO,['kim jong-il'],REFUTES,False,SUPPORTS,Kim Jong-il is a member of Eternal Chairman of the National Defence Commission.,True,False,False,True,True
+Ann Richards was the head of the executive branch of a state government.,SUPPORTS,['ann richards'],SUPPORTS,True,NOT_ENOUGH_INFO,Ann Richards is an executive.,True,True,False,False,True
+Samsung has developed and marketed televisions.,NOT_ENOUGH_INFO,['samsung'],SUPPORTS,False,NOT_ENOUGH_INFO,samsung operates in the electronics industry.,True,False,True,True,False
+Osamu Tezuka only practiced drawing as a young adult.,NOT_ENOUGH_INFO,['osamu tezuka'],REFUTES,False,NOT_ENOUGH_INFO,osamu tezuka is an animator.,True,False,True,True,False
+Mandy Moore is a writer.,SUPPORTS,['mandy moore'],NOT_ENOUGH_INFO,False,SUPPORTS,Mandy Moore is a writer.,True,False,True,True,False
+Wentworth Miller made his screenwriting debut with the 2016 thriller film Stoker.,REFUTES,['wentworth miller'],REFUTES,True,NOT_ENOUGH_INFO,wentworth miller is a screenwriter.,True,True,False,False,True
+1978 is Ian Brennan's year of birth.,SUPPORTS,['ian brennan'],REFUTES,False,NOT_ENOUGH_INFO,1978 has held the position of year.,True,False,False,True,True
+Sennacherib had multiple sons.,SUPPORTS,['sennacherib'],SUPPORTS,True,NOT_ENOUGH_INFO,sennacherib was born in nimrud.,True,True,False,False,True
+Manchester United was sued in 1878.,NOT_ENOUGH_INFO,['manchester'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+Danger UXB is a TV show.,SUPPORTS,['uxb'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Anne Rice was born in Birmingham.,REFUTES,['anne rice'],REFUTES,True,SUPPORTS,Anne Rice was born in Birmingham.,True,True,False,False,True
+Ted Cruz is an American male.,SUPPORTS,['ted cruz'],SUPPORTS,True,NOT_ENOUGH_INFO,Ted Cruz is a male.,True,True,False,False,True
+"Harold Macmillan died on December 29, 1886.",REFUTES,['harold macmillan'],REFUTES,True,SUPPORTS,"Harold Macmillan died on December 29, 1886.",True,True,False,False,True
+Christa McAuliffe refused to ever work in New Hampshire.,REFUTES,['christa mcauliffe'],REFUTES,True,REFUTES,christa mcauliffe is a teacher.,True,True,True,False,False
+Randy Savage wears clothes.,NOT_ENOUGH_INFO,['randy savage'],SUPPORTS,False,SUPPORTS,randy savage is a professional wrestler.,True,False,False,True,True
+Leonard Nimoy narrated the computer game Civilization IV.,SUPPORTS,['leonard nimoy'],SUPPORTS,True,NOT_ENOUGH_INFO,leonard nimoy is associated with the genre science fiction.,True,True,False,False,True
+Scotty Moore was a recording engineer for Sony.,NOT_ENOUGH_INFO,['scotty moore'],REFUTES,False,NOT_ENOUGH_INFO,Scotty Moore is an engineer.,True,False,True,True,False
+Awkward Black Girl is an American comedy club.,NOT_ENOUGH_INFO,['awkward black girl'],REFUTES,False,NOT_ENOUGH_INFO,Awkward Black Girl is a comedy club.,True,False,True,True,False
+Wales is a book.,REFUTES,['wales'],REFUTES,True,REFUTES,wales is from united kingdom.,True,True,True,False,False
+Miranda Otto is the mother of Lindsay Otto.,REFUTES,['miranda otto'],REFUTES,True,NOT_ENOUGH_INFO,Miranda Otto has held the position of mother.,True,True,False,False,True
+Eddie Guerrero experienced alcoholism in the nineties.,NOT_ENOUGH_INFO,['eddie guerrero'],SUPPORTS,False,NOT_ENOUGH_INFO,eddie guerrero is a professional wrestler.,True,False,True,True,False
+Drake Bell is a songwriter who sings what he's written.,SUPPORTS,"['drake', 'drake bell']",SUPPORTS,True,NOT_ENOUGH_INFO,Drake Bell is a songwriter.,True,True,False,False,True
+David Spade starred in Black Sheep and gained acclaim.,NOT_ENOUGH_INFO,['david spade'],SUPPORTS,False,NOT_ENOUGH_INFO,Black Sheep has David Spade as a cast member.,True,False,True,True,False
+Harold Macmillan was a German politician.,REFUTES,['harold macmillan'],REFUTES,True,NOT_ENOUGH_INFO,Harold Macmillan is a politician.,True,True,False,False,True
+"In 2013, Gal Gadot was ranked as a high earning actress/model, the majority of her income coming from acting.",SUPPORTS,['gal gadot'],SUPPORTS,True,NOT_ENOUGH_INFO,gal gadot is an actor.,True,True,False,False,True
+"Chris Kyle was not born on April 8, 1974.",REFUTES,['chris kyle'],REFUTES,True,REFUTES,"Chris Kyle was born on April 8, 1974.",True,True,True,False,False
+Taylor Lautner appeared on My Wife and Kids for six seasons.,NOT_ENOUGH_INFO,['taylor lautner'],REFUTES,False,NOT_ENOUGH_INFO,taylor lautner is a television actor.,True,False,True,True,False
+"In 1987, Cher was released.",SUPPORTS,['cher'],REFUTES,False,NOT_ENOUGH_INFO,cher is associated with the genre pop music.,True,False,False,True,True
+Jonah Hill starred in Oceans Eleven.,NOT_ENOUGH_INFO,['jonah hill'],REFUTES,False,SUPPORTS,Oceans Eleven has Jonah Hill as a cast member.,True,False,False,True,True
+Tinker Tailor Soldier Spy stars Gary Oldman and Adam Sandler.,NOT_ENOUGH_INFO,['adam sandler'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,True,True,False
+The Boeing 767 is an aircraft.,SUPPORTS,['boeing'],SUPPORTS,True,NOT_ENOUGH_INFO,,False,True,False,False,True
+Janet Leigh was an actress.,SUPPORTS,['janet leigh'],SUPPORTS,True,SUPPORTS,Janet Leigh is an actress.,True,True,True,False,False
+Manmohan Singh was only a prime minister before Jawaharlal Nehru.,REFUTES,['manmohan singh'],REFUTES,True,NOT_ENOUGH_INFO,Manmohan Singh is a minister.,True,True,False,False,True
+Birthday Song (2 Chainz song) was produced by Mike Dean.,SUPPORTS,['mike dean'],REFUTES,False,NOT_ENOUGH_INFO,,False,False,False,True,True
+L.A. Reid has been the chairman of an American record label group that formed in 1998.,SUPPORTS,['l.a. reid'],SUPPORTS,True,NOT_ENOUGH_INFO,L.A. Reid is a chairman.,True,True,False,False,True
+Jiang Wen was born on January 5.,SUPPORTS,['jiang wen'],REFUTES,False,SUPPORTS,Jiang Wen was born on January 5.,True,False,True,True,False
+Bethany Hamilton's autobiography was adapted into a film in 2014.,REFUTES,['bethany hamilton'],SUPPORTS,False,NOT_ENOUGH_INFO,bethany hamilton is a writer.,True,False,False,True,True
+Liverpool is a tourist destination because of The Beatles.,SUPPORTS,"['beatles', 'liverpool']",SUPPORTS,True,NOT_ENOUGH_INFO,liverpool is from united kingdom.,True,True,False,False,True
+Bank of America has manual teller machines.,NOT_ENOUGH_INFO,['bank of america'],SUPPORTS,False,NOT_ENOUGH_INFO,bank of america is from united states.,True,False,True,True,False
+Eva Mendes is a person.,SUPPORTS,['eva mendes'],SUPPORTS,True,SUPPORTS,Eva Mendes is a person.,True,True,True,False,False
+Zoe Saldana is a Leo.,REFUTES,['zoe saldana'],NOT_ENOUGH_INFO,False,SUPPORTS,Zoe Saldana is a leo.,True,False,False,True,True
+Stanley Williams attended college in California.,NOT_ENOUGH_INFO,['stanley williams'],NOT_ENOUGH_INFO,True,NOT_ENOUGH_INFO,stanley williams was born on 1951-01-01.,True,True,True,False,False
+Linkin Park toured North America in 2003.,NOT_ENOUGH_INFO,['linkin park'],SUPPORTS,False,NOT_ENOUGH_INFO,linkin park is from of origin united states.,True,False,True,True,False
+Liam Neeson has been nominated for an award.,SUPPORTS,['liam neeson'],SUPPORTS,True,SUPPORTS,liam neeson has received the theatre world award award.,True,True,True,False,False
+AMGTV has television programming classified as sports.,NOT_ENOUGH_INFO,['amgtv'],SUPPORTS,False,NOT_ENOUGH_INFO,amgtv is from united states.,True,False,True,True,False
+Janelle Monáe is only signed to Bad Boys Records.,REFUTES,['janelle monáe'],REFUTES,True,NOT_ENOUGH_INFO,Janelle Monáe is signed to Bad Boys Records.,True,True,False,False,True
+Leslie Alexander is incapable of bond trading.,REFUTES,['leslie alexander'],NOT_ENOUGH_INFO,False,NOT_ENOUGH_INFO,Leslie Alexander has held the position of incapable.,True,False,False,True,True
+The New England Patriots owns the record for most Super Bowls won - five.,REFUTES,['the new england patriots'],REFUTES,True,NOT_ENOUGH_INFO,New England Patriots owned by record for most Super Bowls,True,True,False,False,True
+Diwali is one of the most popular festivals of Christianity.,NOT_ENOUGH_INFO,['diwali'],REFUTES,False,REFUTES,diwali is from india.,True,False,False,True,True
+Brown University's main campus is located in the oldest city in the world.,NOT_ENOUGH_INFO,"[""brown university's""]",REFUTES,False,NOT_ENOUGH_INFO,Brown University's P159 oldest city in the world,True,False,True,True,False
