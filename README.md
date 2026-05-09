@@ -90,16 +90,19 @@ Rather than replacing LLM reasoning, FactGraph acts as an external verification 
 ### **Baseline LLM Accuracy**
 **57.14%**
 
-### **KG System Accuracy**
-**45.67%**
+### **KG + LLM (Strict) Accuracy**
+**46.28%**
+
+### **KG + LLM (Relaxed) Accuracy**
+**48.29%**
 
 ### **Hallucination Rescue Rate**
-**59.62%**
+**62.44%**
 
 ---
 ### **Key Result**
 
-FactGraph corrected **127 out of 213 incorrect LLM predictions**, achieving a hallucination rescue rate of approximately **60%**.
+FactGraph corrected **133 out of 213 incorrect LLM predictions**, achieving a hallucination rescue rate of approximately **62.44%**.
 
 This shows that even though the standalone LLM had higher raw accuracy, FactGraph was effective at identifying and correcting many unsupported or hallucinated predictions.
 
