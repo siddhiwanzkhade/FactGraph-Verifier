@@ -197,7 +197,7 @@ python -m spacy download en_core_web_sm
 
 ## **Summary**
 FactGraph-Verifier demonstrates how external knowledge grounding can reduce hallucinated LLM predictions in fact verification tasks.
-While the standalone LLM achieved higher raw accuracy, FactGraph corrected nearly **60%** of the LLM’s incorrect predictions by validating claims against Knowledge Graph evidence and NLI-based reasoning.
+While the standalone LLM achieved higher raw accuracy, FactGraph corrected nearly **62.44%** of the LLM’s incorrect predictions by validating claims against Knowledge Graph evidence and NLI-based reasoning.
 This makes the project useful for building safer and more trustworthy LLM systems where factual reliability matters more than unsupported confidence.
 
 ---
