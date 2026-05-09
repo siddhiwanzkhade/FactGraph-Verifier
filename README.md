@@ -68,11 +68,7 @@ Rather than replacing LLM reasoning, FactGraph acts as an external verification 
 ## **System Architecture**
 
 
-<h2>FactGraph Pipeline</h2>
-
-<p align="center">
-  <img src="images/factgraph_pipeline.png" alt="FactGraph Pipeline" width="900"/>
-</p>
+<img width="1254" height="705" alt="factgraph_pipeline" src="https://github.com/user-attachments/assets/75d1fd06-0c9b-4648-a904-f30f1392ac23" />
 
 ---
 
