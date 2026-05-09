@@ -68,7 +68,7 @@ Rather than replacing LLM reasoning, FactGraph acts as an external verification 
 ## **System Architecture**
 
 
-<img width="1920" height="1080" alt="Untitled (Presentation)" src="https://github.com/user-attachments/assets/704bfbc8-18c4-4499-9605-8882aed07748" />
+<img width="1920" height="1080" alt="Untitled (Presentation)" src='/Users/siddhiwanzkhade/Downloads/Untitled (Presentation)-3.pdf'/>
 
 ---
 
