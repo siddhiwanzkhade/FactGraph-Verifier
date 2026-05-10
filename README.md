@@ -35,6 +35,7 @@ Rather than replacing LLM reasoning, FactGraph acts as an external verification 
 - **Knowledge Graph retrieval (Neo4j + Wikidata)**
 - **Semantic fallback retrieval (Sentence Transformers)**
 - **Natural Language Inference (DeBERTa)**
+- **LLM Verifier(Qwen)..(additional)**
 - **Hallucination rescue evaluation**
 
 ### **Core Goal**
