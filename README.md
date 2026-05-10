@@ -155,7 +155,7 @@ python -m spacy download en_core_web_sm
 ## **Neo4j Setup**
 - Install Neo4j Desktop
 - Start local instance
-- Update credentials in project scripts
+- Update credentials in load_kgfacts_to_neo4j.py
 
 
 ---
