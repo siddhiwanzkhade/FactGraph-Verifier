@@ -142,8 +142,8 @@ This shows that even though the standalone LLM had higher raw accuracy, FactGrap
 
 ### **Quick Setup**
 ```bash
-git clone https://github.com/yourusername/FactGraph-Verifier.git
-cd factgraph-annotator
+git clone https://github.com/siddhiwanzkhade/FactGraph-Verifier.git
+cd FactGraph-Verifier
 
 conda create -n factgraph python=3.10
 conda activate factgraph
