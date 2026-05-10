@@ -60,7 +60,10 @@ Rather than replacing LLM reasoning, FactGraph acts as an external verification 
 5. **NLI Verification**  
    DeBERTa checks whether the retrieved evidence supports, refutes, or does not provide enough information for the claim.
 
-6. **Hallucination Rescue Evaluation**  
+6. **Qwen Based LLM Verifier**
+   A Qwen-based open LLM is used as an additional verifier. It takes the original claim and the retrieved KG/semantic evidence as input, then predicts   whether the evidence SUPPORTS, REFUTES, or provides NOT ENOUGH INFO for the claim. This helps compare LLM-based evidence verification with the DeBERTa NLI verifier.
+
+8. **Hallucination Rescue Evaluation**  
    The system measures how often FactGraph corrects wrong LLM predictions.
 
 ---
@@ -94,15 +97,15 @@ Rather than replacing LLM reasoning, FactGraph acts as an external verification 
 **46.28%**
 
 ### **KG + LLM (Relaxed) Accuracy**
-**48.29%**
+**47.08%**
 
 ### **Hallucination Rescue Rate**
-**62.44%**
+**63.38%**
 
 ---
 ### **Key Result**
 
-FactGraph corrected **133 out of 213 incorrect LLM predictions**, achieving a hallucination rescue rate of approximately **62.44%**.
+FactGraph corrected **135 out of 213 incorrect LLM predictions**, achieving a hallucination rescue rate of approximately **63.38%**.
 
 This shows that even though the standalone LLM had higher raw accuracy, FactGraph was effective at identifying and correcting many unsupported or hallucinated predictions.
 
