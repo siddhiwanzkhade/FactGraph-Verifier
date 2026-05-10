@@ -98,15 +98,15 @@ Rather than replacing LLM reasoning, FactGraph acts as an external verification 
 **46.28%**
 
 ### **KG + LLM (Relaxed) Accuracy**
-**47.08%**
+**48.29%**
 
 ### **Hallucination Rescue Rate**
-**63.38%**
+**62.44%**
 
 ---
 ### **Key Result**
 
-FactGraph corrected **135 out of 213 incorrect LLM predictions**, achieving a hallucination rescue rate of approximately **63.38%**.
+FactGraph corrected **133 out of 213 incorrect LLM predictions**, achieving a hallucination rescue rate of approximately **62.44%**.
 
 This shows that even though the standalone LLM had higher raw accuracy, FactGraph was effective at identifying and correcting many unsupported or hallucinated predictions.
 
@@ -201,7 +201,7 @@ python -m spacy download en_core_web_sm
 
 ## **Summary**
 FactGraph-Verifier demonstrates how external knowledge grounding can reduce hallucinated LLM predictions in fact verification tasks.
-While the standalone LLM achieved higher raw accuracy, FactGraph corrected nearly **63.38%** of the LLM’s incorrect predictions by validating claims against Knowledge Graph evidence and NLI-based reasoning.
+While the standalone LLM achieved higher raw accuracy, FactGraph corrected nearly **62.44%** of the LLM’s incorrect predictions by validating claims against Knowledge Graph evidence and NLI-based reasoning.
 This makes the project useful for building safer and more trustworthy LLM systems where factual reliability matters more than unsupported confidence.
 
 ---
