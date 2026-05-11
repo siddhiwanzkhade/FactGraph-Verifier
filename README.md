@@ -79,6 +79,7 @@ Rather than replacing LLM reasoning, FactGraph acts as an external verification 
 ## **Dataset Overview**
 
 ### **FEVER (Fact Extraction and VERification)**
+Dataset link : https://fever.ai/dataset/fever.html
 - Wikipedia-derived factual claims
 - Human-verified labels:
   - **SUPPORTS**
