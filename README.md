@@ -4,63 +4,51 @@ Knowledge Graph Grounded Hallucination Correction for LLM Fact Verification
 
 ---
 
-## Overview
+## The Problem
 
-LLMs label factual claims fast — but without evidence. When the model is wrong, nothing flags it. At annotation scale, confidently wrong labels silently corrupt your dataset.
+LLMs label factual claims confidently — but from memory, not evidence.
 
-FactGraph sits between the raw LLM annotation and the final label. It independently verifies each claim against a Wikidata-derived Knowledge Graph, and corrects the LLM when the evidence says otherwise.
+> **Claim:** "Elon Musk was born in Canada."
+> 
+> | | Label | Evidence |
+> |--|-------|----------|
+> | Baseline LLM | `SUPPORTS` ✗ | none |
+> | FactGraph KG | `REFUTES` ✓ | Elon Musk → place of birth → Pretoria |
 
-Built and evaluated on the [FEVER dataset](https://fever.ai/dataset/fever.html) · CSE 538 NLP · Stony Brook University · May 2026
+The LLM confuses Canada with South Africa — plausible because Musk did live in Canada briefly. 
+At annotation scale, this failure mode is silent. Wrong labels look identical to correct ones. There is no evidence trail to flag them.
+
+The numbers confirm it — running a baseline LLM directly on FEVER claims:
+
+| Metric | Baseline LLM |
+|--------|-------------|
+| Overall accuracy | 57.14% |
+| SUPPORTS recall | 0.79 |
+| REFUTES recall | 0.82 |
+| **NEI recall** | **0.17** |
+
+The model correctly identified only **17% of NOT ENOUGH INFO cases** — on the other 83%, it picked a confident concrete label with nothing backing it up. That is the exact failure mode FactGraph targets.
 
 ---
 
-## Pipeline
+## The Solution
 
-![FactGraph Pipeline](factgraph_pipeline.png)
+FactGraph adds a structured KG verification layer between the LLM annotation and the final label. Instead of replacing LLM reasoning, it independently checks each claim against a Wikidata-derived Knowledge Graph and corrects the LLM when evidence says otherwise.
+
+![FactGraph Pipeline](/Users/siddhiwanzkhade/Documents/factgraph_pipeline.png)
 
 ```
 FEVER claim → LLaMA baseline label → triple extraction → KG retrieval → evidence verification → final label
 ```
 
-The FEVER gold label is **not used during prediction** — only during evaluation.
+The gold label is never used during prediction — only during evaluation.
 
----
+**How verification works:**
 
-## Features
-
-**LLM Baseline Annotation**
-- LLaMA 3.1 predicts one of `SUPPORTS`, `REFUTES`, `NOT ENOUGH INFO` from the raw claim
-- No retrieval, no evidence trail — purely from parametric memory
-- Treated as the potentially hallucinated label throughout the pipeline
-
-**Claim Triple Extraction**
-- spaCy NER + dependency parsing converts the claim into a `(subject, property_id, object)` triple
-- Rule-based mapping normalizes the relation to a Wikidata-style property
-- Handles relation direction correction (e.g. person-to-film vs film-to-director) and object normalization
-
-**KG Retrieval — Three Routes**
-- **Exact match**: subject + property + object all present → direct Neo4j lookup
-- **KG retrieve**: property known but object uncertain → fetch all values for subject + property
-- **Semantic fallback**: exact lookup fails → embed claim and subject-neighborhood triples with `all-MiniLM-L6-v2`, rank by cosine similarity
-
-**Evidence Verbalizer**
-- Converts structured `(subject, property, value)` triples into short natural-language strings before passing to the verifier
-- Example: `anne rice -- occupation -- novelist` → `"Anne Rice occupation novelist"`
-
-**NLI Verification — DeBERTa**
-- `cross-encoder/nli-deberta-v3-small` takes KG evidence as premise, FEVER claim as hypothesis
-- Maps `entailment → SUPPORTS`, `contradiction → REFUTES`, `neutral → NOT ENOUGH INFO`
-
-**LLM Verification — Qwen**
-- `Qwen/Qwen2.5-3B-Instruct` receives the claim + retrieved KG evidence and predicts the label
-- **Strict prompt**: predict `NOT ENOUGH INFO` unless evidence clearly and directly supports or refutes
-- **Relaxed prompt**: allow semantic equivalence and paraphrases (e.g. "novelist" supports "author")
-- Improved rescue rate from ~59% (DeBERTa) to **62.44%** by handling semi-structured KG evidence better
-
-**Hallucination Rescue Evaluation**
-- A rescue occurs when the baseline LLM is wrong but the KG verifier is correct
-- `Rescue Rate = corrected baseline errors / total baseline errors`
-- Final result: **133 / 213 = 62.44%**
+1. The claim is parsed into a `(subject, property, object)` triple using spaCy NER and dependency parsing
+2. The triple is looked up in Neo4j via three routes — exact match, property-based retrieval, or semantic fallback using `all-MiniLM-L6-v2` cosine similarity
+3. Retrieved evidence is verbalized and passed to a verifier — either `cross-encoder/nli-deberta-v3-small` (NLI) or `Qwen2.5-3B-Instruct` (LLM verifier with strict/relaxed prompting)
+4. The verified label is compared against the baseline LLM label to measure hallucination rescue
 
 ---
 
@@ -70,7 +58,7 @@ The FEVER gold label is **not used during prediction** — only during evaluatio
 
 | System | Accuracy | Key Behavior |
 |--------|----------|--------------|
-| Baseline LLM | 57.14% | Strong SUPPORTS/REFUTES, weak NEI |
+| Baseline LLM | 57.14% | Strong SUPPORTS/REFUTES, blind to missing evidence |
 | KG + LLM (Strict) | 46.28% | Conservative, high NEI recall |
 | KG + LLM (Relaxed) | 48.29% | Less conservative, more concrete labels |
 
@@ -81,8 +69,6 @@ The FEVER gold label is **not used during prediction** — only during evaluatio
 | Baseline LLM | 0.79 | 0.82 | 0.17 |
 | KG + LLM (Strict) | 0.28 | 0.21 | 0.83 |
 | KG + LLM (Relaxed) | 0.38 | 0.48 | 0.57 |
-
-The baseline LLM correctly identified only **17% of NOT ENOUGH INFO** cases — predicting a confident concrete label on the other 83% with no evidence to back it up. That's the failure mode FactGraph targets.
 
 ### Detailed Classification Report
 
@@ -101,10 +87,12 @@ The baseline LLM correctly identified only **17% of NOT ENOUGH INFO** cases — 
 ### Hallucination Rescue
 
 ```
-Baseline LLM wrong on:     213 / 497 evaluation claims
-KG verifier corrected:     133 of those 213 errors
-Rescue Rate:               62.44%
+Baseline LLM wrong on:        213 / 497 evaluation claims
+KG verifier corrected:        133 of those 213 errors
+Rescue Rate:                  62.44%
 ```
+
+The KG verifier trades raw accuracy for hallucination control. It is most valuable as a second-stage correction layer, not a standalone classifier.
 
 ### Knowledge Graph Coverage
 
@@ -117,7 +105,7 @@ Rescue Rate:               62.44%
 | KG-covered FEVER claims | 7,724 (38.6%) |
 | Final evaluation subset | 497 annotated claims |
 
-KG properties fetched: date of birth, place of birth, country of citizenship, occupation, award received, country of origin, founded by, headquarters.
+Properties fetched: date of birth, place of birth, country of citizenship, occupation, award received, country of origin, founded by, headquarters.
 
 ---
 
@@ -125,22 +113,27 @@ KG properties fetched: date of birth, place of birth, country of citizenship, oc
 
 ```bash
 .
+├── src/
+│   ├── kg_construction/            # Build the knowledge graph
+│   │   ├── fever_wikidata_kg.py    # Extract FEVER entities + fetch Wikidata facts
+│   │   ├── extract_triple_v8.py    # spaCy NER + dependency parsing → triples
+│   │   └── load_kgfacts_to_neo4j.py
+│   ├── retrieval/                  # KG lookup + semantic fallback
+│   │   ├── query_kg.py             # Exact-match and property-based Neo4j retrieval
+│   │   └── sem_fallback.py         # Cosine-similarity fallback retrieval
+│   ├── merge/                      # Merge all evidence sources
+│   │   └── merge.py
+│   ├── verification/               # NLI + LLM verifiers
+│   │   ├── llm_label_llama.py      # LLaMA baseline annotation
+│   │   ├── nli.py                  # DeBERTa NLI verification
+│   │   └── llm_verify.py           # Qwen verifier (strict + relaxed)
+│   └── evaluation/                 # Metrics + rescue rate
+│       ├── evaluate_nli2.py
+│       ├── evaluate_llm_verify.py
+│       └── rescue_rate_500_claims.py
 ├── outputs/                        # Pipeline CSV outputs
-├── scripts/
-│   └── sem_fallback.py             # Semantic fallback retrieval
 ├── neo4j_graph_output/             # Neo4j graph snapshots
-├── factgraph_pipeline.png          # Pipeline diagram
-├── fever_wikidata_kg.py            # Extract FEVER entities + fetch Wikidata facts
-├── load_kgfacts_to_neo4j.py        # Load facts into Neo4j
-├── extract_triple_v8.py            # spaCy NER + dependency parsing → triples
-├── query_kg.py                     # KG exact-match and property retrieval
-├── merge.py                        # Merge exact-match + KG-retrieve + fallback evidence
-├── nli.py                          # DeBERTa NLI verification
-├── llm_verify.py                   # Qwen verifier (strict + relaxed prompts)
-├── llm_label_llama.py              # LLaMA baseline annotation
-├── evaluate_nli2.py                # Accuracy + classification report (NLI path)
-├── evaluate_llm_verify.py          # Accuracy + classification report + rescue rate (LLM path)
-├── rescue_rate_500_claims.py       # Hallucination rescue analysis
+├── factgraph_pipeline.png
 ├── requirements.txt
 └── README.md
 ```
@@ -176,7 +169,7 @@ NEO4J_PASSWORD=your_password
 
 ### 4. Start Neo4j
 
-Install [Neo4j Desktop](https://neo4j.com/download/), start a local instance, update credentials in `load_kgfacts_to_neo4j.py`.
+Install [Neo4j Desktop](https://neo4j.com/download/), start a local instance, update credentials in `src/kg_construction/load_kgfacts_to_neo4j.py`.
 
 ---
 
@@ -185,22 +178,22 @@ Install [Neo4j Desktop](https://neo4j.com/download/), start a local instance, up
 ### Build and Load the Knowledge Graph
 
 ```bash
-python fever_wikidata_kg.py          # extract entities + fetch Wikidata facts
-python load_kgfacts_to_neo4j.py      # load into Neo4j
+python src/kg_construction/fever_wikidata_kg.py
+python src/kg_construction/load_kgfacts_to_neo4j.py
 ```
 
 ### Run the Full Pipeline
 
 ```bash
-python llm_label_llama.py            # baseline LLM annotation
-python extract_triple_v8.py          # claim → (subject, property, object) triple
-python query_kg.py                   # KG exact-match and property retrieval
-python scripts/sem_fallback.py       # semantic fallback for unmatched claims
-python merge.py                      # merge all evidence into verifier input
-python nli.py                        # DeBERTa NLI verification
-python llm_verify.py                 # Qwen LLM verification (strict + relaxed)
-python evaluate_nli2.py              # evaluate NLI path
-python evaluate_llm_verify.py        # evaluate LLM path + rescue rate
+python src/verification/llm_label_llama.py       # baseline LLM annotation
+python src/kg_construction/extract_triple_v8.py  # claim → (subject, property, object) triple
+python src/retrieval/query_kg.py                 # KG exact-match and property retrieval
+python src/retrieval/sem_fallback.py             # semantic fallback for unmatched claims
+python src/merge/merge.py                        # merge all evidence into verifier input
+python src/verification/nli.py                   # DeBERTa NLI verification
+python src/verification/llm_verify.py            # Qwen LLM verification (strict + relaxed)
+python src/evaluation/evaluate_nli2.py           # evaluate NLI path
+python src/evaluation/evaluate_llm_verify.py     # evaluate LLM path + rescue rate
 ```
 
 ---
@@ -227,51 +220,28 @@ Python · spaCy · Neo4j · Wikidata API · Sentence Transformers · HuggingFace
 ## Key Design Decisions
 
 **Why KG triples instead of text retrieval?**
-RAG retrieves passages like "Anne Rice was an American author" — rich context, but the model still has to locate the relevant fact. FactGraph retrieves structured triples like `Anne Rice -- occupation -- novelist` that directly represent the factual relation being checked. The trade-off is coverage (text > KG) vs interpretability and precision (KG > text).
+RAG retrieves passages — rich context, but the model still has to locate the relevant fact inside the passage. FactGraph retrieves structured triples like `Anne Rice -- occupation -- novelist` that directly represent the factual relation being checked. Coverage is narrower than text retrieval, but evidence is explicit and inspectable.
 
-**Why a two-verifier setup?**
-DeBERTa NLI works well on natural-language premise–hypothesis pairs but treats semi-structured KG triples as neutral more often. Qwen handles the same triples flexibly and can match paraphrases (e.g. "novelist" supporting "author"). The strict vs relaxed prompting controls the caution-vs-coverage trade-off directly.
+**Why two verifiers?**
+DeBERTa NLI is trained on natural-language premise–hypothesis pairs and treats semi-structured KG triples as neutral more often than it should. Qwen handles the same triples flexibly and can match paraphrases. The strict vs relaxed prompting controls the caution-vs-coverage trade-off directly. Rescue rate improved from ~59% (DeBERTa) to 62.44% (Qwen).
 
 **Why rescue rate instead of just accuracy?**
-Raw accuracy hides class-level failure. The baseline LLM looks strong at 57.14%, but it only recognizes 17% of NOT ENOUGH INFO cases — meaning 83% of claims that lack evidence get a confident concrete label anyway. Rescue rate measures what actually matters: how often does the verification layer catch those mistakes.
-
----
-
-## Limitations
-
-- KG coverage is bounded by Wikidata fact availability — an entity can be present in the graph without the specific property needed to verify a given claim
-- Surface-form mismatches (e.g. "Spielberg" vs "Steven Spielberg") cause silent lookup failures
-- Strict verifier over-predicts NOT ENOUGH INFO when evidence is partial rather than absent
-- Multi-hop reasoning not supported
-- Final evaluation subset is 497 claims (KG-overlapping), not full FEVER dev
+Raw accuracy hides class-level failure. The baseline looks strong at 57.14% overall, but NEI recall of 0.17 means it's confidently mislabeling 83% of claims that lack evidence. Rescue rate measures what matters: how often does the verification layer catch those mistakes.
 
 ---
 
 ## Future Work
 
-1. **Broader KG property coverage** — fetch more Wikidata properties per entity to improve fact-level hit rate beyond 38.6%
-2. **Alias resolution and fuzzy entity linking** — reduce missed retrievals from surface-form mismatches without changing pipeline architecture
-3. **Smarter KG override logic** — distinguish partial evidence from missing evidence; defer to LLM label when the KG can't ground the claim, override when a direct match exists
-4. **Hybrid decision rules** — use LLM flexibility when evidence is absent, KG grounding when a direct match is available
-5. **Graph-RAG integration** — replace static KG queries with graph-based retrieval-augmented generation
-6. **Cross-encoder reranking** — replace cosine-similarity fallback with a cross-encoder for better evidence ranking
+1. **Graph-RAG integration** — replace static Neo4j queries with dynamic graph traversal. Instead of fetching
+     pre-stored triples,the retriever walks the KG at inference time, enabling multi-hop reasoning across entity       relationships that single-property lookup can't reach.
 
----
+3. **Cross-encoder reranking over semantic fallback** — swap cosine-similarity ranking with a cross-encoder that       jointly scores the claim and candidate evidence. Same retrieval architecture,significantly better precision       on ambiguous claims.
 
-## Contributions
+4. **Confidence-weighted hybrid decisions** — assign a retrieval confidence score per route (exact match > KG          retrieve > semantic fallback) and use it to dynamically weight KG vs LLM predictions rather than hard             overrides. Moves the system toward a learned fusion layer.
 
-**Siddhi Wanzkhade** — Neo4j loading, triple extraction, property mapping, KG query logic, KG coverage analysis, semantic fallback retrieval (Sentence Transformers), hallucination rescue analysis, exact-match vs fallback evaluation.
+5. **Fine-tuned NLI on verbalized KG evidence** — DeBERTa performs best on fluent sentence pairs. Fine-tuning on       verbalized KG triples as premises would specialize the verifier for structured evidence without changing the      retrieval pipeline.
 
-**Vidisha Deshpande** — KG construction from FEVER entities and Wikidata, Neo4j loading, KG coverage analysis, semantic fallback, DeBERTa NLI verification, LLM verifier experiments, hallucination rescue analysis.
-
----
-
-## References
-
-- Thorne et al. (2018). FEVER: A Large-scale Dataset for Fact Extraction and VERification. NAACL-HLT.
-- Vrandečić & Krötzsch (2014). Wikidata: A Free Collaborative Knowledgebase. CACM.
-- Reimers & Gurevych (2019). Sentence-BERT. EMNLP-IJCNLP.
-- He et al. (2021). DeBERTa: Decoding-enhanced BERT with Disentangled Attention. ICLR.
+6. **Scaling to open-domain claims beyond FEVER** — the current KG is FEVER-targeted. Extending to a broader           Wikidata subgraph would make FactGraph applicable to real-world annotation pipelines, social media fact-          checking, and LLM output auditing at scale.
 
 ---
 
@@ -281,3 +251,6 @@ Raw accuracy hides class-level failure. The baseline LLM looks strong at 57.14%,
 - [Wikidata API](https://www.wikidata.org/wiki/Wikidata:Data_access)
 - [Neo4j Documentation](https://neo4j.com/docs/)
 - [HuggingFace Transformers](https://huggingface.co/docs/transformers)
+
+
+
