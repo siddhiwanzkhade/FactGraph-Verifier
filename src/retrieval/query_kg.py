@@ -6,7 +6,7 @@ from neo4j import GraphDatabase
 # ── connect ───────────────────────────────────────────────────
 driver = GraphDatabase.driver(
     "neo4j://127.0.0.1:7687",
-    auth=("neo4j", "Siddhiw$7")
+    auth=("NEO4J_USERNAME", "NEO4J_PASSWORD")
 )
 
 # ── load extracted triples ────────────────────────────────────
