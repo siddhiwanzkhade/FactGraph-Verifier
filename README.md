@@ -37,7 +37,13 @@ The model correctly identified only **17% of NOT ENOUGH INFO cases** — on the 
 FactGraph adds a structured KG verification layer between the LLM annotation and the final label. Instead of replacing LLM reasoning, it independently checks each claim against a Wikidata-derived Knowledge Graph and corrects the LLM when evidence says otherwise.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d4e43235-0660-45c9-b842-7673f46b7fac" alt="FactGraph Pipeline" width="90%">
+  <table>
+    <tr>
+      <td>
+        <img src="https://github.com/user-attachments/assets/d4e43235-0660-45c9-b842-7673f46b7fac" alt="FactGraph Pipeline" width="100%">
+      </td>
+    </tr>
+  </table>
 </p>
 
 ```
