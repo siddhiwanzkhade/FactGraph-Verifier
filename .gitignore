@@ -38,11 +38,6 @@ processed_data/
 !outputs/
 !outputs/**
 
-# Exclude duplicate / old scripts
-evaluate_nli.py
-sem_fallback_v2.py
-query_kg_new.py
-
 # Model files / embeddings
 models/
 checkpoints/
@@ -63,10 +58,15 @@ logs/
 Thumbs.db
 
 # IDE files
-.vscode/
+.vscode/settings.json
 .idea/
 
 # Temporary files
 *.tmp
 *.bak
 *.swp
+
+# Debug artifacts
+country_of_origin.png
+occupation.png
+factgraph_report-final.pdf
