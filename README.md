@@ -121,25 +121,25 @@ Properties fetched: date of birth, place of birth, country of citizenship, occup
 ```bash
 .
 ├── src/
-│   ├── kg_construction/            # Build the knowledge graph
-│   │   ├── fever_wikidata_kg.py    # Extract FEVER entities + fetch Wikidata facts
-│   │   ├── extract_triple_v8.py    # spaCy NER + dependency parsing → triples
-│   │   └── load_kgfacts_to_neo4j.py
-│   ├── retrieval/                  # KG lookup + semantic fallback
-│   │   ├── query_kg.py             # Exact-match and property-based Neo4j retrieval
-│   │   └── sem_fallback.py         # Cosine-similarity fallback retrieval
-│   ├── merge/                      # Merge all evidence sources
+│   ├── kg_construction/              # Build the knowledge graph
+│   │   ├── fever_wikidata_kg.py      # Extract FEVER entities + fetch Wikidata facts
+│   │   ├── extract_triple_v8.py      # spaCy NER + dependency parsing → triples
+│   │   └── load_kgfacts_to_neo4j.py  # Load Wikidata facts into Neo4j
+│   ├── retrieval/                    # KG lookup + semantic fallback
+│   │   ├── query_kg.py               # Exact-match and property-based Neo4j retrieval
+│   │   └── sem_fallback.py           # Cosine-similarity fallback retrieval
+│   ├── merge/                        # Merge all evidence sources
 │   │   └── merge.py
-│   ├── verification/               # NLI + LLM verifiers
-│   │   ├── llm_label_llama.py      # LLaMA baseline annotation
-│   │   ├── nli.py                  # DeBERTa NLI verification
-│   │   └── llm_verify.py           # Qwen verifier (strict + relaxed)
-│   └── evaluation/                 # Metrics + rescue rate
-│       ├── evaluate_nli2.py
-│       ├── evaluate_llm_verify.py
-│       └── rescue_rate_500_claims.py
-├── outputs/                        # Pipeline CSV outputs
-├── neo4j_graph_output/             # Neo4j graph snapshots
+│   ├── verification/                 # NLI + LLM verifiers
+│   │   ├── llm_label_llama.py        # LLaMA baseline annotation
+│   │   ├── nli.py                    # DeBERTa NLI verification
+│   │   └── llm_verify.py             # Qwen verifier (strict + relaxed)
+│   └── evaluation/                   # Metrics + rescue rate
+│       ├── evaluate_nli2.py          # Accuracy + classification report (NLI path)
+│       ├── evaluate_llm_verify.py    # Accuracy + classification report (LLM path)
+│       └── rescue_rate_500_claims.py # Hallucination rescue rate analysis
+├── outputs/                          # Pipeline CSV outputs
+├── neo4j_graph_output/               # Neo4j graph snapshots
 ├── factgraph_pipeline.png
 ├── requirements.txt
 └── README.md
