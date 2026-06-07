@@ -17,6 +17,7 @@ LLMs label factual claims confidently — but from memory, not evidence.
 
 The LLM confuses Canada with South Africa — plausible because Musk did live in Canada briefly. 
 At annotation scale, this failure mode is silent. Wrong labels look identical to correct ones. There is no evidence trail to flag them.
+That's exactly the failure mode that FactGraph targets.
 
 The numbers confirm it — running a baseline LLM directly on FEVER claims:
 
@@ -27,7 +28,7 @@ The numbers confirm it — running a baseline LLM directly on FEVER claims:
 | REFUTES recall | 0.82 |
 | **NEI recall** | **0.17** |
 
-The model correctly identified only **17% of NOT ENOUGH INFO cases** — on the other 83%, it picked a confident concrete label with nothing backing it up. That is the exact failure mode FactGraph targets.
+The model correctly identified only **17% of NOT ENOUGH INFO cases** — on the other 83%, it picked a confident concrete label with nothing backing it up. 
 
 ---
 
@@ -35,7 +36,9 @@ The model correctly identified only **17% of NOT ENOUGH INFO cases** — on the 
 
 FactGraph adds a structured KG verification layer between the LLM annotation and the final label. Instead of replacing LLM reasoning, it independently checks each claim against a Wikidata-derived Knowledge Graph and corrects the LLM when evidence says otherwise.
 
-![FactGraph Pipeline](assets/factgraph_pipeline.png)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d4e43235-0660-45c9-b842-7673f46b7fac" alt="FactGraph Pipeline" width="90%">
+</p>
 
 ```
 FEVER claim → LLaMA baseline label → triple extraction → KG retrieval → evidence verification → final label
