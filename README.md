@@ -35,7 +35,7 @@ The model correctly identified only **17% of NOT ENOUGH INFO cases** — on the 
 
 FactGraph adds a structured KG verification layer between the LLM annotation and the final label. Instead of replacing LLM reasoning, it independently checks each claim against a Wikidata-derived Knowledge Graph and corrects the LLM when evidence says otherwise.
 
-![FactGraph Pipeline](/Users/siddhiwanzkhade/Documents/factgraph_pipeline.png)
+![FactGraph Pipeline](assets/factgraph_pipeline.png)
 
 ```
 FEVER claim → LLaMA baseline label → triple extraction → KG retrieval → evidence verification → final label
