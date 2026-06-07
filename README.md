@@ -227,12 +227,15 @@ Python · spaCy · Neo4j · Wikidata API · Sentence Transformers · HuggingFace
 ## Key Design Decisions
 
 **Why KG triples instead of text retrieval?**
+
 RAG retrieves passages — rich context, but the model still has to locate the relevant fact inside the passage. FactGraph retrieves structured triples like `Anne Rice -- occupation -- novelist` that directly represent the factual relation being checked. Coverage is narrower than text retrieval, but evidence is explicit and inspectable.
 
 **Why two verifiers?**
+
 DeBERTa NLI is trained on natural-language premise–hypothesis pairs and treats semi-structured KG triples as neutral more often than it should. Qwen handles the same triples flexibly and can match paraphrases. The strict vs relaxed prompting controls the caution-vs-coverage trade-off directly. Rescue rate improved from ~59% (DeBERTa) to 62.44% (Qwen).
 
 **Why rescue rate instead of just accuracy?**
+
 Raw accuracy hides class-level failure. The baseline looks strong at 57.14% overall, but NEI recall of 0.17 means it's confidently mislabeling 83% of claims that lack evidence. Rescue rate measures what matters: how often does the verification layer catch those mistakes.
 
 ---
