@@ -231,9 +231,9 @@ Python · spaCy · Neo4j · Wikidata API · Sentence Transformers · HuggingFace
 
 ## Key Design Decisions
 
-**Why KG triples instead of text retrieval?**
+* **Why KG triples instead of text retrieval?**
 
-**What varies, what stays fixed**
+  **What varies, what stays fixed**
 
 Retrieval systems can differ in two separate ways: *how* they search (the retriever) and *what* they search for (the retrieval unit). FactGraph varies the first and fixes the second.
 
@@ -243,11 +243,11 @@ Retrieval systems can differ in two separate ways: *how* they search (the retrie
 
 I tried three different retrieval mechanisms  in sequence, each one more forgiving than the last. But all three still have to hand back the same rigid shape — a clean `(subject, property, object)` triple. That fixed shape is also the ceiling: accuracy drops sharply down the fallback chain (36.3% → 19.0% → 14.9%), because a looser search still has to force its answer into a container built for exact facts, not approximate ones.
 
-**Why two verifiers?**
+* **Why two verifiers?**
 
 DeBERTa NLI is trained on natural-language premise–hypothesis pairs and treats semi-structured KG triples as neutral more often than it should. Qwen handles the same triples flexibly and can match paraphrases. The strict vs relaxed prompting controls the caution-vs-coverage trade-off directly. Rescue rate improved from ~59% (DeBERTa) to 62.44% (Qwen).
 
-**Why rescue rate instead of just accuracy?**
+* **Why rescue rate instead of just accuracy?**
 
 Raw accuracy hides class-level failure. The baseline looks strong at 57.14% overall, but NEI recall of 0.17 means it's confidently mislabeling 83% of claims that lack evidence. Rescue rate measures what matters: how often does the verification layer catch those mistakes.
 
