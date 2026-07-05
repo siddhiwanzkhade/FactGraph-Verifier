@@ -233,7 +233,15 @@ Python · spaCy · Neo4j · Wikidata API · Sentence Transformers · HuggingFace
 
 **Why KG triples instead of text retrieval?**
 
-RAG retrieves passages — rich context, but the model still has to locate the relevant fact inside the passage. FactGraph retrieves structured triples like `Anne Rice -- occupation -- novelist` that directly represent the factual relation being checked. Coverage is narrower than text retrieval, but evidence is explicit and inspectable.
+**What varies, what stays fixed**
+
+Retrieval systems can differ in two separate ways: *how* they search (the retriever) and *what* they search for (the retrieval unit). FactGraph varies the first and fixes the second.
+
+| | Retriever | Retrieval unit |
+|---|---|---|
+| FactGraph | Varied — exact match → neighborhood → semantic fallback | Fixed — always a KG triple |
+
+I tried three different retrieval mechanisms  in sequence, each one more forgiving than the last. But all three still have to hand back the same rigid shape — a clean `(subject, property, object)` triple. That fixed shape is also the ceiling: accuracy drops sharply down the fallback chain (36.3% → 19.0% → 14.9%), because a looser search still has to force its answer into a container built for exact facts, not approximate ones.
 
 **Why two verifiers?**
 
