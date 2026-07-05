@@ -1,6 +1,6 @@
 # FactGraph-Verifier
 
-#### Knowledge Graph Grounded Hallucination Reduction for LLM Annotations and Fact Verification
+### Knowledge Graph Grounded Hallucination Reduction for LLM Annotations and Fact Verification
 
 ---
 
