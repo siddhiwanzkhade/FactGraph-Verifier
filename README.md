@@ -6,7 +6,9 @@ Knowledge Graph Grounded Hallucination Correction for LLM Fact Verification
 
 ## The Problem
 
-LLMs label factual claims confidently — but from memory, not evidence.
+LLM-based fact verification typically operates as closed-book classification: given a claim, the model emits a label — SUPPORTS, REFUTES, or NOT ENOUGH INFO — directly from parametric knowledge, with no mechanism exposing what evidence, if any, justifies that label. This decouples confidence from evidential support. The model is equally fluent whether the claim is true, false, or entirely unverifiable from what it learned during training, and nothing in its output distinguishes a grounded answer from a plausible guess.
+
+This is a distinct failure mode from ordinary misclassification. A wrong label produced with high apparent confidence is indistinguishable from a correct one downstream — there is no confidence signal, hedge, or evidence trail an external system can use to flag it. The claim "Elon Musk was born in Canada" illustrates this concretely: the model answers `SUPPORTS`, conflating Musk's time living in Canada with his place of birth (Pretoria, South Africa). The error is systematic, not random — it stems from surface-level association overriding factual grounding.
 
 > **Claim:** "Elon Musk was born in Canada."
 > 
@@ -15,11 +17,7 @@ LLMs label factual claims confidently — but from memory, not evidence.
 > | Baseline LLM | `SUPPORTS` ✗ | none |
 > | FactGraph KG | `REFUTES` ✓ | Elon Musk → place of birth → Pretoria |
 
-The LLM confuses Canada with South Africa — plausible because Musk did live in Canada briefly. 
-At annotation scale, this failure mode is silent. Wrong labels look identical to correct ones. There is no evidence trail to flag them.
-That's exactly the failure mode that FactGraph targets.
-
-The numbers confirm it — running a baseline LLM directly on FEVER claims:
+Empirically, this pattern holds at scale, not just in isolated examples. Running a baseline LLM directly on FEVER claims:
 
 | Metric | Baseline LLM |
 |--------|-------------|
@@ -28,13 +26,17 @@ The numbers confirm it — running a baseline LLM directly on FEVER claims:
 | REFUTES recall | 0.82 |
 | **NEI recall** | **0.17** |
 
-The model correctly identified only **17% of NOT ENOUGH INFO cases** — on the other 83%, it picked a confident concrete label with nothing backing it up. 
+The NEI recall is the critical figure: the model correctly identifies only **17% of NOT ENOUGH INFO cases**. On the remaining 83%, faced with a claim it has no real evidence for, it commits to a concrete label rather than abstaining. This is precisely the gap FactGraph is designed to close.
+
+We introduce **FactGraph-Verifier**, a verification layer that intercepts the LLM's initial label before it is treated as final and checks it against a Wikidata-derived knowledge graph. Each claim is decomposed into a `(subject, property, object)` triple, matched against the graph through exact, property-based, or semantic retrieval, and the resulting evidence is passed to an entailment verifier (NLI or LLM-based) that either confirms or overrides the original prediction. The goal is not to replace the LLM's reasoning, but to condition its output on external, inspectable evidence rather than accepting it on the model's word alone.
 
 ---
 
 ## The Solution
 
-FactGraph adds a structured KG verification layer between the LLM annotation and the final label. Instead of replacing LLM reasoning, it independently checks each claim against a Wikidata-derived Knowledge Graph and corrects the LLM when evidence says otherwise.
+The fix isn't to replace the LLM's reasoning — it's to make it accountable. FactGraph adds a structured knowledge graph verification layer that sits between the LLM's initial label and the final answer, independently checking each claim against Wikidata-derived facts and correcting the LLM whenever the evidence disagrees with it.
+
+Getting there wasn't a single clean step. Exact-match lookups against the KG kept missing facts that were actually present — a differently formatted date, a claim phrased around a relation the graph didn't recognize outright. Rigid retrieval alone wasn't enough, so a semantic fallback was added to catch what exact matching couldn't. Two verifiers — an NLI model and an LLM verifier — were also compared side by side, since neither handled semi-structured KG evidence perfectly on its own.
 
 <table border="2">
   <tr>
@@ -261,6 +263,3 @@ Raw accuracy hides class-level failure. The baseline looks strong at 57.14% over
 - [Wikidata API](https://www.wikidata.org/wiki/Wikidata:Data_access)
 - [Neo4j Documentation](https://neo4j.com/docs/)
 - [HuggingFace Transformers](https://huggingface.co/docs/transformers)
-
-
-
