@@ -28,7 +28,7 @@ Empirically, this pattern holds at scale, not just in isolated examples. Running
 
 The NEI recall is the critical figure: the model correctly identifies only **17% of NOT ENOUGH INFO cases**. On the remaining 83%, faced with a claim it has no real evidence for, it commits to a concrete label rather than abstaining. This is precisely the gap FactGraph is designed to close.
 
-We introduce **FactGraph-Verifier**, a verification layer that intercepts the LLM's initial label before it is treated as final and checks it against a Wikidata-derived knowledge graph. Each claim is decomposed into a `(subject, property, object)` triple, matched against the graph through exact, property-based, or semantic retrieval, and the resulting evidence is passed to an entailment verifier (NLI or LLM-based) that either confirms or overrides the original prediction. The goal is not to replace the LLM's reasoning, but to condition its output on external, inspectable evidence rather than accepting it on the model's word alone.
+ **FactGraph-Verifier**, is a verification layer that intercepts the LLM's initial label before it is treated as final and checks it against a Wikidata-derived knowledge graph. Each claim is decomposed into a `(subject, property, object)` triple, matched against the graph through exact, property-based, or semantic retrieval, and the resulting evidence is passed to an entailment verifier (NLI or LLM-based) that either confirms or overrides the original prediction. The goal is not to replace the LLM's reasoning, but to condition its output on external, inspectable evidence rather than accepting it on the model's word alone.
 
 ---
 
