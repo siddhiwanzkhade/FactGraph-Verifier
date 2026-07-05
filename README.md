@@ -36,7 +36,10 @@ We introduce **FactGraph-Verifier**, a verification layer that intercepts the LL
 
 The fix isn't to replace the LLM's reasoning — it's to make it accountable. FactGraph adds a structured knowledge graph verification layer that sits between the LLM's initial label and the final answer, independently checking each claim against Wikidata-derived facts and correcting the LLM whenever the evidence disagrees with it.
 
-Getting there wasn't a single clean step. Exact-match lookups against the KG kept missing facts that were actually present — a differently formatted date, a claim phrased around a relation the graph didn't recognize outright. Rigid retrieval alone wasn't enough, so a semantic fallback was added to catch what exact matching couldn't. Two verifiers — an NLI model and an LLM verifier — were also compared side by side, since neither handled semi-structured KG evidence perfectly on its own.
+Getting there wasn't a single clean step.
+* Exact-match lookups against the KG kept missing facts that were actually present — a differently formatted date, a claim phrased around a relation the graph didn't recognize outright.
+* Rigid retrieval alone wasn't enough, so a semantic fallback was added to catch what exact matching couldn't.
+*  Two verifiers — an NLI model and an LLM verifier — were also compared side by side, since neither handled semi-structured KG evidence perfectly on its own.
 
 <table border="2">
   <tr>
