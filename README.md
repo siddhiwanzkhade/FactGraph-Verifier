@@ -1,4 +1,4 @@
-# FactGraph-Verifier
+# FactGraph-Verifier 
 
 ### Knowledge Graph Grounded Hallucination Reduction for LLM Annotations and Fact Verification
 
@@ -6,7 +6,7 @@ FactGraph-Verifier is a knowledge-graph-grounded verification layer for LLM fact
 
 ---
 
-## Problem
+## Problem 
 
 Ask an LLM to fact-check a claim, and it gives you a label — SUPPORTS, REFUTES, or NOT ENOUGH INFO — with total confidence, whether it's right or wrong. The label comes straight from parametric memory, with nothing behind it to check.
 
@@ -31,7 +31,7 @@ The other 83% — it guesses. And sounds just as sure.
 
 ---
 
-## Solution
+## Solution 🚀
 **How verification works:**
 
 1. The claim is parsed into a `(subject, property, object)` triple using spaCy's NER and dependency parsing — reducing the claim to a structured relation.
@@ -82,7 +82,7 @@ Baseline LLM wrong on:        213 / 497 evaluation claims
 KG verifier corrected:        133 of those 213 errors
 Rescue Rate:                  62.44%
 ```
-> 🎯 **62.44% of baseline LLM hallucinations were caught and corrected** by the FactGraph-Verifier.
+ 🎯 **62.44% of baseline LLM hallucinations were caught and corrected** by the FactGraph-Verifier.
 
 ### Knowledge Graph Coverage
 
@@ -99,7 +99,7 @@ Properties fetched: date of birth, place of birth, country of citizenship, occup
 
 ---
 
-## Usage
+## Usage 
 
 To set up and run **FactGraph-Verifier**, follow these steps:
 
