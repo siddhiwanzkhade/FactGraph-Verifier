@@ -4,7 +4,6 @@
 
 FactGraph-Verifier is a knowledge-graph-grounded verification layer for LLM fact-checking. It takes an LLM's initial SUPPORTS / REFUTES / NOT ENOUGH INFO label, decomposes the claim into a `(subject, property, object)` triple, retrieves matching facts from a Wikidata-derived Neo4j graph, and runs that evidence through an entailment verifier (DeBERTa NLI or Qwen2.5-3B) before letting the original label stand — catching the exact failure mode where a model states a wrong answer with the same confidence as a right one, because nothing in its output exposes what evidence, if any, backs the label.
 
----
 
 ## Problem 
 
@@ -29,7 +28,6 @@ Faced with a claim it can't verify, the model(LLM) admits "not enough info" only
 
 The other 83% — it guesses. And sounds just as sure.
 
----
 
 ## Solution 🚀
 **How verification works:**
@@ -53,8 +51,6 @@ FEVER claim → LLaMA baseline label → triple extraction → KG retrieval → 
 ```
 
 The gold label is never used during prediction — only during evaluation.
-
----
 
 ## Results
 
@@ -96,8 +92,6 @@ Rescue Rate:                  62.44%
 | Final evaluation subset | 497 annotated claims |
 
 Properties fetched: date of birth, place of birth, country of citizenship, occupation, award received, country of origin, founded by, headquarters.
-
----
 
 ## Usage 
 
@@ -153,7 +147,6 @@ To set up and run **FactGraph-Verifier**, follow these steps:
 
 You're now ready to explore and reproduce FactGraph's results!
 
----
 
 ## Models Supported
 
@@ -166,7 +159,6 @@ You're now ready to explore and reproduce FactGraph's results!
 | LLM verifier | Qwen/Qwen2.5-3B-Instruct | Evidence-grounded claim verification (strict + relaxed) |
 | KG backend | Neo4j | Stores and queries Wikidata-derived triples |
 
----
 
 
 ## Key Design Decisions
@@ -183,7 +175,7 @@ Keeping the retrieval unit fixed means every route — however lenient — retur
 DeBERTa NLI is trained on natural-language pairs and often reads semi-structured KG triples as neutral. Qwen handles them more flexibly and catches paraphrases. Strict vs. relaxed prompting tunes the caution-vs-coverage tradeoff. Rescue rate: ~59% (DeBERTa) → 62.44% (Qwen).
 - **Why rescue rate, not accuracy?**
 57.14% baseline accuracy looks fine until you see NEI recall at 0.17 — it's confidently wrong on 83% of claims it has no evidence for. Rescue rate measures the thing that matters: how often the KG layer catches that.
----
+
 
 ## Contributing to FactGraph-Verfier 🤝
 
@@ -194,11 +186,4 @@ DeBERTa NLI is trained on natural-language pairs and often reads semi-structured
 - **Fine-tuned NLI on verbalized KG evidence** — DeBERTa performs best on fluent sentence pairs. Fine-tuning on       verbalized KG triples as premises would specialize the verifier for structured evidence without changing the      retrieval pipeline.
 - **Scaling to open-domain claims beyond FEVER** — the current KG is FEVER-targeted. Extending to a broader           Wikidata subgraph would make FactGraph applicable to real-world annotation pipelines, social media fact-          checking, and LLM output auditing at scale.
 
----
 
-## Acknowledgments
-
-- [FEVER Dataset](https://fever.ai/dataset/fever.html)
-- [Wikidata API](https://www.wikidata.org/wiki/Wikidata:Data_access)
-- [Neo4j Documentation](https://neo4j.com/docs/)
-- [HuggingFace Transformers](https://huggingface.co/docs/transformers)
