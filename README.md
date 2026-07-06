@@ -6,26 +6,26 @@ FactGraph-Verifier is a knowledge-graph-grounded verification layer for LLM fact
 
 ---
 
-## The Problem
+## Problem
 
 Ask an LLM to fact-check a claim, and it gives you a label — SUPPORTS, REFUTES, or NOT ENOUGH INFO — with total confidence, whether it's right or wrong. The label comes straight from parametric memory, with nothing behind it to check.
 
-**Claim:** *"Elon Musk was born in Canada."*
-**Model says:** `SUPPORTS`
+**Claim:** *"Elon Musk was born in Canada."*<br>
+**Model says:** `SUPPORTS`<br>
 **Actual answer:** Wrong. Born in Pretoria, South Africa.
 
-He lived in Canada. The model mistook that for birthplace.
+**FACT** : He lived in Canada. The model mistook that for birthplace.
 
-No evidence. No hedge. No way to catch it.
+No evidence. No way to catch it.
 
-Tested at scale, on FEVER claims:
+### Tested at scale, on FEVER claims:
 
 | Metric | Baseline LLM |
 |---|---|
 | Accuracy | 57.14% |
 | NEI recall | **0.17** |
 
-Faced with a claim it can't verify, the model admits "not enough info" only **17%** of the time.
+Faced with a claim it can't verify, the model(LLM) admits "not enough info" only **17%** of the time.
 
 The other 83% — it guesses. And sounds just as sure.
 
