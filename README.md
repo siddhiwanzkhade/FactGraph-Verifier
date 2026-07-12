@@ -52,6 +52,11 @@ FEVER claim → LLaMA baseline label → triple extraction → KG retrieval → 
 
 The gold label is never used during prediction — only during evaluation.
 
+**Property mapping is the translation step:**
+It takes the messy, natural-language relation extracted from the claim ("born in," "died in," "works for," "married to") and maps it to the correct, normalized KG property (place_of_birth, place_of_death, employer, spouse).
+
+**Properties fetched :** date of birth, date of death, place of birth, country of citizenship, occupation, inception date, founded by, country, headquarters, industry, developer, country of origin, award received, position held, record label, genre, cast member, director, screenwriter.
+
 ## Results
 
 ### System-Level Accuracy
@@ -91,10 +96,6 @@ Rescue Rate:                  62.44%
 | KG-covered FEVER claims | 7,724 (38.6%) |
 | Final evaluation subset | 497 annotated claims |
 
-**Property mapping is the translation step:**
-It takes the messy, natural-language relation extracted from the claim ("born in," "died in," "works for," "married to") and maps it to the correct, normalized KG property (place_of_birth, place_of_death, employer, spouse).
-
-**Properties fetched :** date of birth, date of death, place of birth, country of citizenship, occupation, inception date, founded by, country, headquarters, industry, developer, country of origin, award received, position held, record label, genre, cast member, director, screenwriter.
 
 ## Usage 
 
