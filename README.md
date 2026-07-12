@@ -1,6 +1,6 @@
 # FactGraph-Verifier 
 
-### Knowledge Graph Grounded Hallucination Reduction for LLM Annotations and Fact Verification
+### KG-Grounded Annotation Pipeline for LLM Hallucination Detection and Fact Verification
 
 FactGraph-Verifier is a knowledge-graph-grounded verification layer for LLM fact-checking. It takes an LLM's initial SUPPORTS / REFUTES / NOT ENOUGH INFO label, decomposes the claim into a `(subject, property, object)` triple, retrieves matching facts from a Wikidata-derived Neo4j graph, and runs that evidence through an entailment verifier (DeBERTa NLI or Qwen2.5-3B) before letting the original label stand — catching the exact failure mode where a model states a wrong answer with the same confidence as a right one, because nothing in its output exposes what evidence, if any, backs the label.
 
