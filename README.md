@@ -156,7 +156,7 @@ You're now ready to explore and reproduce FactGraph's results!
 
 | Component | Model | Purpose |
 |-----------|-------|---------|
-| Baseline annotator | LLaMA 3.1 | Generates initial claim label without retrieval |
+| Baseline annotator | LLaMA 3.3 | Generates initial claim label without retrieval |
 | Semantic property mapping | all-MiniLM-L6-v2 | Maps claim relations to Wikidata-style properties |
 | Semantic fallback retriever | all-MiniLM-L6-v2 | Cosine-similarity KG neighborhood search |
 | NLI verifier | cross-encoder/nli-deberta-v3-small | Entailment / contradiction / neutral classification |
