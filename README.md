@@ -4,12 +4,6 @@
 
 FactGraph-Verifier is a knowledge-graph-grounded verification layer for LLM fact-checking. It takes an LLM's initial SUPPORTS / REFUTES / NOT ENOUGH INFO label, decomposes the claim into a `(subject, property, object)` triple, retrieves matching facts from a Wikidata-derived Neo4j graph, and runs that evidence through an entailment verifier (DeBERTa NLI or Qwen2.5-3B) before letting the original label stand — catching the exact failure mode where a model states a wrong answer with the same confidence as a right one, because nothing in its output exposes what evidence, if any, backs the label.
 
-## Features :
-
-* **Named Entity Recognition (NER)**: Identifies people, places, organizations, and other key entities within a claim to break it down into its core components.
-* **Knowledge Graph Retrieval & Semantic Similarity Search**: Searches a structured database of real-world facts for direct matches, and falls back to semantic similarity search when a claim is worded differently from how the fact is stored.
-* **Natural Language Inference (NLI)**: Checks whether the retrieved evidence actually supports or contradicts the claim, rather than assuming the AI's first answer is correct.
-* **Hallucination Detection**: Flags and corrects cases where the AI stated a wrong answer with full confidence, using evidence instead of guesswork.
   
 ## Problem 
 
@@ -62,6 +56,14 @@ The gold label is never used during prediction — only during evaluation.
 It takes the messy, natural-language relation extracted from the claim ("born in," "died in," "works for," "married to") and maps it to the correct, normalized KG property (place_of_birth, place_of_death, employer, spouse).
 
 **Properties fetched :** date of birth, date of death, place of birth, country of citizenship, occupation, inception date, founded by, country, headquarters, industry, developer, country of origin, award received, position held, record label, genre, cast member, director, screenwriter.
+
+
+## Features :
+
+* **Named Entity Recognition (NER)**: Identifies people, places, organizations, and other key entities within a claim to break it down into its core components.
+* **Knowledge Graph Retrieval & Semantic Similarity Search**: Searches a structured database of real-world facts for direct matches, and falls back to semantic similarity search when a claim is worded differently from how the fact is stored.
+* **Natural Language Inference (NLI)**: Checks whether the retrieved evidence actually supports or contradicts the claim, rather than assuming the AI's first answer is correct.
+* **Hallucination Detection**: Flags and corrects cases where the AI stated a wrong answer with full confidence, using evidence instead of guesswork.
 
 ## Results
 
