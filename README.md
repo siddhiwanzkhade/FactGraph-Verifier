@@ -6,14 +6,11 @@ FactGraph-Verifier is a knowledge-graph-grounded verification layer for LLM fact
 
 ## Features :
 
-- **Named Entity Recognition (NER) & Dependency Parsing**: Uses spaCy to parse each claim's grammatical structure and extract entities, decomposing free-text claims into structured (subject, property, object) triples.
-- **Property Normalization**: Maps the messy, natural-language relation extracted from a claim (e.g. "born in," "works for") to a normalized Wikidata-style KG property (e.g. `place_of_birth`, `employer`).
-- **Knowledge Graph Retrieval**: Queries a Wikidata-derived Neo4j graph through three fallback routes — exact match, property-based lookup, and semantic fallback — trading off precision for coverage as retrieval gets more lenient.
-- **Semantic Similarity Search**: Falls back to `all-MiniLM-L6-v2` sentence embeddings and cosine similarity to retrieve KG facts when a claim's exact wording doesn't match how the fact is stored.
-- **Natural Language Inference (NLI)**: Runs retrieved evidence through `cross-encoder/nli-deberta-v3-small` for entailment/contradiction/neutral classification against the claim.
-- **LLM-Based Verification**: Uses `Qwen2.5-3B-Instruct` as a second, more flexible verifier under strict and relaxed prompting, better handling paraphrased or semi-structured evidence than the NLI model alone.
-- **Hallucination Detection & Rescue Scoring**: Compares the KG-verified label against the baseline LLM (`LLaMA 3.3`) label to measure how many baseline hallucinations get caught and corrected.
-- 
+* **Named Entity Recognition (NER)**: Identifies people, places, organizations, and other key entities within a claim to break it down into its core components.
+* **Knowledge Graph Retrieval & Semantic Similarity Search**: Searches a structured database of real-world facts for direct matches, and falls back to semantic similarity search when a claim is worded differently from how the fact is stored.
+* **Natural Language Inference (NLI)**: Checks whether the retrieved evidence actually supports or contradicts the claim, rather than assuming the AI's first answer is correct.
+* **Hallucination Detection**: Flags and corrects cases where the AI stated a wrong answer with full confidence, using evidence instead of guesswork.
+  
 ## Problem 
 
 Ask an LLM to fact-check a claim, and it gives you a label — SUPPORTS, REFUTES, or NOT ENOUGH INFO — with total confidence, whether it's right or wrong. The label comes straight from parametric memory, with nothing behind it to check.
